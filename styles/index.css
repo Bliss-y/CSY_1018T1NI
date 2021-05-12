@@ -1,21 +1,25 @@
+/* this part is constant for all the pages since it the basic layout for the site */
 body {
-    background-image: linear-gradient( rgb(4, 15, 29), rgb(7, 53, 97));
+    background-image: linear-gradient( rgb(4, 15, 29), rgb(7, 53, 97)); /* to give a certain flow to background */
+    /* the repetition of gradient is cancelled */
     background-repeat: no-repeat;
+    /* gives a constant background all over the page instead of just the amount with elements */
     background-attachment: fixed;
     padding: 10px;
     padding-right: 20px;
 }
+/* menu is the container of menus */
 #menu {
     width: 100%;
+    /* positioning the actual menus */
     padding-bottom: 10px;
     padding-left: 10px;
+    padding-top: 29px;
+    /* will keep it at least a bit responsive until it's impossible and menus will be linear */
     display: flex;
     flex-wrap: wrap;
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    grid-template-columns: 200px 200px auto;
     background-color: #234c8a00;
-    padding-top: 29px;
+    /* creating a glowing neon effect with box shadow manupulation */
     box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
         0px 0px 5px 3px  #0ff,
         0 0 1px 1px rgb(206, 255, 255)inset,
@@ -23,13 +27,16 @@ body {
     border-style: solid;
     border-color: rgb(142, 255, 249);
 }
+/* contains the individual menus */
 .menus {
+    /* for the animation */
     position: relative;
     height: 30px;
     width: 100px;
     background-color: rgba(19, 191, 214, 0);
     text-align: center;
     padding-top: 5px;
+    /* creating the same glowing effect */
     box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
         0px 0px 3px 3px  #0ff,
         0 0 1px 1px rgb(206, 255, 255)inset,
@@ -38,37 +45,41 @@ body {
     border-color: azure;
 }
 .menus:hover{
+    /* small animation on hover */
     text-shadow: none;
     transition-duration: 0.5s;
     background-color: rgb(139, 241, 255);
-    box-shadow: 0px 0px 3px 3px rgb(206, 255, 255),
-        0px 0px 5px 3px  #0ff,
-        0 0 3px 3px rgb(206, 255, 255)inset,
-        0 0px 5px 3px #0ff inset;
 }
+
 a {
-    margin-left: 5px;
-    font-style: bold;
-    text-shadow: 0 0 3px #fff, 0 0 5px rgb(255, 255, 255), 0 0 5px #00e6e6, 0 0 8px #00e6d3, 0 0 10px #00dee6, 0 0 14px #00cbe6, 0 0 18px #00d7e6;
+    margin-left: 20px;
+    /* making text glow as well */
+    text-shadow: 0 0 3px #fff,
+        0 0 5px rgb(255, 255, 255),
+        0 0 5px #00e6e6, 0 0 8px #00e6d3,
+        0 0 10px #00dee6, 0 0 14px #00cbe6,
+        0 0 18px #00d7e6;
     color:rgb(84, 0, 95);
 }
+
 footer{
     width: 100%;
 }
-@keyframes moveUp {
+/* creating a bounce animation for whenever needed : ) */
+@keyframes bounce {
     0%{left:0; top:0;}
     25%{left:0; top: -10px;}
     50%{left: 0; top : 0;}
     75%{left: 0; top : -5px;}
     100%{left: 0; top : 0;}
-    
 }
+/* to display the page that we're in through menu and added bounce on it */
 #curr {
     background-color: rgb(139, 241, 255);
     box-shadow: 0px 0px 3px 3px rgb(206, 255, 255),
         0px 0px 5px 3px  #0ff,
         0 0 3px 3px rgb(206, 255, 255)inset,
         0 0px 5px 3px #0ff inset;
-        animation-name: moveUp;
+        animation-name: bounce;
         animation-duration: 1s;
 }
