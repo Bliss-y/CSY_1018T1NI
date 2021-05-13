@@ -1,39 +1,45 @@
 /* this part is constant for all the pages since it the basic layout for the site */
 body {
-    background-image: linear-gradient( rgb(4, 15, 29), rgb(7, 53, 97)); /* to give a certain flow to background */
-    /* the repetition of gradient is cancelled */
+    /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
+    background-image: url("images/eren-arik-g1.png"); /* to give a certain flow to background */
+    /* the repetition of image is cancelled */
     background-repeat: no-repeat;
     /* gives a constant background all over the page instead of just the amount with elements */
+    background-size: auto;
     background-attachment: fixed;
     padding: 10px;
-    padding-right: 20px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 40px;
 }
 /* menu is the container of menus */
 #menu {
     width: 100%;
-    /* positioning the actual menus */
+    display: flex;
+    margin-right: 10px;
+    /* positioning the actual menus
     padding-bottom: 10px;
     padding-left: 10px;
-    padding-top: 29px;
+    padding-top: 15px; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #234c8a00;
+    background-color: rgb(5, 0, 36);
     /* creating a glowing neon effect with box shadow manupulation */
     box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
         0px 0px 5px 3px  #0ff,
         0 0 1px 1px rgb(206, 255, 255)inset,
         0 0px 5px 3px #0ff inset;
     border-style: solid;
+    padding: 10px;
     border-color: rgb(142, 255, 249);
 }
 /* contains the individual menus */
 .menus {
-    /* for the animation */
+    /* required for the animation */
+    margin-top: 0;
     position: relative;
     height: 30px;
     width: 100px;
-    background-color: rgba(19, 191, 214, 0);
+    background-color: transparent;
     text-align: center;
     padding-top: 5px;
     /* creating the same glowing effect */
@@ -53,13 +59,11 @@ body {
 
 a {
     margin-left: 20px;
-    /* making text glow as well */
-    text-shadow: 0 0 3px #fff,
-        0 0 5px rgb(255, 255, 255),
-        0 0 5px #00e6e6, 0 0 8px #00e6d3,
-        0 0 10px #00dee6, 0 0 14px #00cbe6,
-        0 0 18px #00d7e6;
     color:rgb(84, 0, 95);
+}
+.hamburger{
+    width: 0;
+    height: 0;
 }
 
 footer{
@@ -67,19 +71,106 @@ footer{
 }
 /* creating a bounce animation for whenever needed : ) */
 @keyframes bounce {
-    0%{left:0; top:0;}
-    25%{left:0; top: -10px;}
+    0%{left: 0; top:0;}
+    25%{left: 0; top: -10px;}
     50%{left: 0; top : 0;}
     75%{left: 0; top : -5px;}
     100%{left: 0; top : 0;}
 }
 /* to display the page that we're in through menu and added bounce on it */
 #curr {
-    background-color: rgb(139, 241, 255);
+    background-color: rgb(86, 131, 214);
     box-shadow: 0px 0px 3px 3px rgb(206, 255, 255),
         0px 0px 5px 3px  #0ff,
         0 0 3px 3px rgb(206, 255, 255)inset,
         0 0px 5px 3px #0ff inset;
         animation-name: bounce;
         animation-duration: 1s;
+}
+.glowText{
+    /* making text glow as well */
+    text-shadow: 0 0 3px #fff,
+        0 0 5px rgb(255, 255, 255),
+        0 0 5px #00e6e6, 0 0 8px #00e6d3,
+        0 0 10px #00dee6, 0 0 14px #00cbe6,
+        0 0 18px #00d7e6;
+}
+@keyframes float {
+    0%{ right:0; top: 0;}
+    20%{ right: 20px; }
+    40%{ right: 2px; top: 20px;}
+    60%{ right: -2px; top: 5px; }
+    80%{ right: 0; top: 2px;}
+    100% { right:0; top: 0; }
+}
+
+#main {
+    z-index: -1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    width: 90%;
+    background-image:radial-gradient( rgba(6, 52, 255, 0) 75%, rgba(19, 191, 214, 0.5));
+    position: relative;
+    margin: 15px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+.glowBorder{
+    box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
+        0px 0px 5px 3px  #0ff,
+        0 0 1px 1px rgb(206, 255, 255)inset,
+        0 0px 5px 3px #0ff inset;
+    animation-name: float;
+    background-color: rgba(5, 0, 36, 0.685);
+}
+.fieldset{
+    width: 40%;
+    height: 100px;
+    position: relative;
+    animation-name: float;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    height: max-content;
+    padding: 20px;
+    border: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+}
+input{
+    margin: 5px;
+    height: 50px;
+    width: 80%;
+    color: white;
+    padding: 0;
+    text-shadow: 0 0 3px #fff,
+        0 0 5px rgb(255, 255, 255),
+        0 0 5px #00e6e6, 0 0 8px #00e6d3,
+        0 0 10px #00dee6, 0 0 14px #00cbe6,
+        0 0 18px #00d7e6;
+    font-size: 20px;
+    background-color: #00cbe600;
+    border: none;
+    border-bottom: rgba(128, 128, 128, 0.712) solid;
+    border-bottom-width: 1px;
+}
+input:focus{
+    text-shadow: 0 0 3px #fff,
+        0 0 5px rgb(255, 255, 255),
+        0 0 5px #00e6e6, 0 0 8px #00e6d3,
+        0 0 10px #00dee6, 0 0 14px #00cbe6,
+        0 0 18px #00d7e6;
+        outline: none;
+    text-align: center;
+    box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
+        0px 0px 3px 3px  #0ff,
+        0 0 1px 1px rgb(206, 255, 255)inset,
+        0 0px 3px 3px #0ff inset;
+    background-color: rgba(255, 255, 255, 0.192);
+    transition-duration: 1s;
 }
