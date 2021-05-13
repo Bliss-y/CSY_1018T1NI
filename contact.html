@@ -9,24 +9,40 @@
         </title>
     </head>
     <body>
-        <nav id = "menu">
+        <nav id = "menu" class = "glowBorder">
             <a class = "glowText" href = "sitereport.html"><div class = "menus"> Site Report </div></a>  
             <a class = "glowText" href = "index.html"><div class = "menus"> Home </div></a>
             <a class = "glowText" href = "portfolio.html"><div class = "menus"> My Portfolio </div> </a>
             <a class = "glowText" href = "contact.html"><div id="curr" class = "menus"> Contact ME </div> </a>
             <a class = "glowText" href = "cv.html"><div class = "menus"> C.V </div>  </a>
         </nav>
-            <fieldset class = " fieldset glowBorder"> 
-                <form class = " glowText form" action="/contact.html" method = "POST">
-                    <label for=" fname "> Your first name</label>
-                    <input type = "text" name = "fname" placeholder = "First name">
-                    <label for=" mname "> Your middle name</label>
-                    <input type = "text" name = "mname" placeholder = "Middle name">
-                    <label for=" lname "> Your last name</label>
-                    <input type = "text" name = "lname" placeholder = "Last name">
-                </form>
-            </fieldset>
-        <br> <br>
+        <fieldset class = "fieldset glowBorder"> 
+            <form id = "form" class = " glowText" action= "https://www.mail.google.com/" method = "POST">
+                <label for = "fname"> Your first name:</label>
+                <input type = "text" id = "fname" name = "fname" placeholder = "First name">
+                <label for = "mname"> Your middle name:</label>
+                <input type = "text" name = "mname" id = "mname" placeholder = "Middle name">
+                <label for = "lname"> Your last name:</label>
+                <input type = "text" name = "lname" id = "lname" placeholder = "Last name">
+                <label for = "email"> Leave your email:</label>
+                <input type = "text" name = "email"  id = "email" placeholder = "E-mail">
+                <label for = "message"> Write your message below:</label>
+                <textarea id = "message" class = "glowText" name = "message" form = "form" placeholder = "Write your message here"></textarea>
+                <button type = "submit"> Leave the Message </button>
+            </form>       
+        </fieldset>
+        <div id = "textBox" class = "glowBorder glowText">
+            <p>
+                <h1> HI </h1>
+                If you'd like to contact me  fill out the form on the side and i Will reply to you via email.<br>
+                <h1> OR </h1>
+                <h2> Here's a couple of other places to reach out to me. </h2>
+                <a href = "https://www.instagram.com/blyss.y/"> MY Instagram</a>
+                <a href = "https://github.com/Bliss-y"> My Github</a>
+                <a href = "https://www.artstation.com/restrictednkarki"> My Artstation </a>
+            </p>
+        </div>
+        
         <nav><footer><a class = "glowText" href = "sitereport.html">Site Report</a>  
             <a class = "glowText" href = "index.html">Home</a>
             <a class = "glowText" href = "portfolio.html">My Portfolio</a>

@@ -14,6 +14,9 @@ body {
 }
 /* menu is the container of menus */
 #menu {
+    z-index: 1;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     margin-right: 10px;
@@ -24,13 +27,7 @@ body {
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
     background-color: rgb(5, 0, 36);
     /* creating a glowing neon effect with box shadow manupulation */
-    box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
-        0px 0px 5px 3px  #0ff,
-        0 0 1px 1px rgb(206, 255, 255)inset,
-        0 0px 5px 3px #0ff inset;
-    border-style: solid;
     padding: 10px;
-    border-color: rgb(142, 255, 249);
 }
 /* contains the individual menus */
 .menus {
@@ -61,12 +58,9 @@ a {
     margin-left: 20px;
     color:rgb(84, 0, 95);
 }
-.hamburger{
-    width: 0;
-    height: 0;
-}
 
 footer{
+    clear: both;
     width: 100%;
 }
 /* creating a bounce animation for whenever needed : ) */
@@ -90,7 +84,7 @@ footer{
 .glowText{
     /* making text glow as well */
     text-shadow: 0 0 3px #fff,
-        0 0 5px rgb(255, 255, 255),
+        0 0 5px #ffffff,
         0 0 5px #00e6e6, 0 0 8px #00e6d3,
         0 0 10px #00dee6, 0 0 14px #00cbe6,
         0 0 18px #00d7e6;
@@ -104,49 +98,62 @@ footer{
     100% { right:0; top: 0; }
 }
 
+.glowBorder{
+    box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
+        0px 0px 5px 3px  #0ff,
+        0 0 1px 1px #ceffff inset,
+        0 0px 5px 3px #0ff inset;
+    animation-name: float;
+    background-color: #050024af;
+}
+
+/* index.html and maybe others as well if i decide to use main */
 #main {
     z-index: -1;
     padding: 20px;
     text-align: center;
-    display: flex;
     width: 90%;
-    background-image:radial-gradient( rgba(6, 52, 255, 0) 75%, rgba(19, 191, 214, 0.5));
+    background-image:radial-gradient( #0634ff00 75%, #13bfd680);
     position: relative;
     margin: 15px;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    
 }
-.glowBorder{
-    box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
-        0px 0px 5px 3px  #0ff,
-        0 0 1px 1px rgb(206, 255, 255)inset,
-        0 0px 5px 3px #0ff inset;
-    animation-name: float;
-    background-color: rgba(5, 0, 36, 0.685);
-}
+
+/* Contact.html  */
+/* designing the overall form */
 .fieldset{
+    float: right;
+    height: max-content;
     width: 40%;
-    height: 100px;
+    /* for animation */
     position: relative;
+    /* animation declared top */
     animation-name: float;
     animation-duration: 10s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
-    height: max-content;
     padding: 20px;
     border: none;
 }
+
 form{
+    /* aligning all the text and inputs so it looks good ") */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    
+    width: 90%;
+    color: black;
 }
-input{
+
+input[type = text]{
+    /* aligning the inputs with text */
+    align-self: center;
+    text-align: center;
     margin: 5px;
     height: 50px;
-    width: 80%;
-    color: white;
+    width: max-content;
+    color: inherit;
     padding: 0;
     text-shadow: 0 0 3px #fff,
         0 0 5px rgb(255, 255, 255),
@@ -159,18 +166,64 @@ input{
     border-bottom: rgba(128, 128, 128, 0.712) solid;
     border-bottom-width: 1px;
 }
-input:focus{
+
+input:focus, textarea:focus{
+    color: inherit;
     text-shadow: 0 0 3px #fff,
         0 0 5px rgb(255, 255, 255),
-        0 0 5px #00e6e6, 0 0 8px #00e6d3,
-        0 0 10px #00dee6, 0 0 14px #00cbe6,
-        0 0 18px #00d7e6;
-        outline: none;
+        0 0 5px #e60000, 0 0 8px #e60000,
+        0 0 10px #e60000, 0 0 14px #e60000,
+        0 0 18px #e60000;
+    outline: none;
     text-align: center;
-    box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
+    /* box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
         0px 0px 3px 3px  #0ff,
         0 0 1px 1px rgb(206, 255, 255)inset,
-        0 0px 3px 3px #0ff inset;
-    background-color: rgba(255, 255, 255, 0.192);
+        0 0px 3px 3px #0ff inset; */
+    box-shadow: 0 -2px 3px 2px red inset;
+    background-color: #f3353500;
+    transition-duration: 0.5s;
+}
+textarea{
+    color: inherit;
+    margin-left: 10px;
+    text-align: center;
+    margin: 5px;
+    background-color: rgba(26, 6, 90, 0.493);
+    font-size: 20px;
+    height: 80px;
+    width: 95%;
+}
+
+button{
+    margin-top: 3px;
+    align-self: center;
+    background-color: #2a36da;
+    border: none;
+    width: 40%;
+    height: 40px;
+    position: relative;
+}
+
+button:hover{
+    transform: translate(0, -4px);
+    background-color: #7e95f8;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 2px 3px 0px #2a36da,
+         0 5px 0 0 #90d2e6,
+        0 5px 0 1px #184a79,
+        0 5px 0 2px rgb(9, 11, 41);
     transition-duration: 1s;
+}
+#textBox{
+    padding: 20px;
+    position: relative;
+    width: max-content;
+    float: right;
+    animation-name: float;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-right: 20px;
+    color: white;
 }
