@@ -4,22 +4,19 @@ body {
     background-image: url("images/eren-arik-g1.png"); /* to give a certain flow to background */
     /* the repetition of image is cancelled */
     background-repeat: no-repeat;
-    /* gives a constant background all over the page instead of just the amount with elements */
-    background-size: auto;
-    background-attachment: fixed;
-    padding: 10px;
+    background-color: black;
+
     margin: 0;
-    padding-left: 20px;
-    padding-right: 40px;
 }
 /* menu is the container of menus */
 #menu {
+
+    list-style: none;
     z-index: 1;
     position: sticky;
     top: 0;
-    width: 100%;
-    display: flex;
-    margin-right: 10px;
+    right: 0;
+    height: 50px;
     /* positioning the actual menus
     padding-bottom: 10px;
     padding-left: 10px;
@@ -47,6 +44,11 @@ body {
     border-style: solid;
     border-color: azure;
 }
+ul{
+    float: right;
+    display: flex;
+    list-style: none;
+}
 .menus:hover{
     /* small animation on hover */
     text-shadow: none;
@@ -61,6 +63,7 @@ a {
 
 footer{
     clear: both;
+    margin-top: 3vw;
     width: 100%;
 }
 /* creating a bounce animation for whenever needed : ) */
@@ -91,10 +94,10 @@ footer{
 }
 @keyframes float {
     0%{ right:0; top: 0;}
-    20%{ right: 20px; }
-    40%{ right: 2px; top: 20px;}
-    60%{ right: -2px; top: 5px; }
-    80%{ right: 0; top: 2px;}
+    20%{ right: 2vw; }
+    40%{ right: 2vw; top: 2vw;}
+    60%{ right: -2vw; top: 0.5vw; }
+    80%{ right: 0; top: 0.2;}
     100% { right:0; top: 0; }
 }
 
@@ -103,29 +106,39 @@ footer{
         0px 0px 5px 3px  #0ff,
         0 0 1px 1px #ceffff inset,
         0 0px 5px 3px #0ff inset;
-    animation-name: float;
     background-color: #050024af;
 }
 
 /* index.html and maybe others as well if i decide to use main */
 #main {
+    margin-left: 5vw;
     z-index: -1;
     padding: 20px;
     text-align: center;
-    width: 90%;
+    max-width: 90%;
+    width: max-content;
     background-image:radial-gradient( #0634ff00 75%, #13bfd680);
     position: relative;
-    margin: 15px;
+    animation-name: float;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+}
+.floaters{
+    font-size: 80px;
+    animation-name: float;
+    position: relative;
+    animation-duration: 10s;
+    animation-delay: 2s;
 }
 
 /* Contact.html  */
 /* designing the overall form */
 .fieldset{
-    float: right;
+    float: left;
+    margin-left: 5vw;
     height: max-content;
-    width: 40%;
+    max-width: 40%;
+    width: max-content;
     /* for animation */
     position: relative;
     /* animation declared top */
@@ -191,8 +204,10 @@ textarea{
     margin: 5px;
     background-color: rgba(26, 6, 90, 0.493);
     font-size: 20px;
-    height: 80px;
+    height: max-content;
     width: 95%;
+    resize: vertical;
+    min-height: 30px;
 }
 
 button{
@@ -219,11 +234,13 @@ button:hover{
 #textBox{
     padding: 20px;
     position: relative;
-    width: max-content;
+    width: 50vw;
+    height: max-content;
     float: right;
     animation-name: float;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    margin-right: 20px;
+    margin-right: 5vw;
     color: white;
+    text-align: center;
 }

@@ -9,15 +9,28 @@
         </title>
     </head>
     <body>
-        <nav id = "menu" class = "glowBorder">
-            <a class = "glowText" href = "sitereport.html"><div class = "menus"> Site Report </div></a>  
-            <a class = "glowText" href = "index.html"><div class = "menus"> Home </div></a>
-            <a class = "glowText" href = "portfolio.html"><div class = "menus"> My Portfolio </div> </a>
-            <a class = "glowText" href = "contact.html"><div id="curr" class = "menus"> Contact ME </div> </a>
-            <a class = "glowText" href = "cv.html"><div class = "menus"> C.V </div>  </a>
+        <nav id = "menu" class = "glowText glowBorder">
+            <ul>
+                <a href = "index.html"><li class = "menus"> Home </li></a>
+                <a href = "portfolio.html"><li class = "menus"> My Portfolio </li> </a>
+                <a href = "contact.html"><li id = "curr" class = "menus"> Contact ME </li> </a>
+                <a href = "cv.html"><li class = "menus"> C.V </li>  </a>
+                <a href = "sitereport.html"><li class = "menus"> Site Report </li></a>  
+            </ul>
         </nav>
+        <div id = "textBox" class = "glowBorder glowText">
+            <p>
+                <h1> HI </h1>
+                <h3>If you'd like to contact me  fill out the form on the side and i Will reply to you via email.</h3><br>
+                <h2> OR </h1>
+                <h3> Here's a couple of other places to reach out to me. </h3>
+                <a href = "https://www.instagram.com/blyss.y/"> MY Instagram</a>
+                <a href = "https://github.com/Bliss-y"> My Github</a>
+                <a href = "https://www.artstation.com/restrictednkarki"> My Artstation </a>
+            </p>
+        </div>
         <fieldset class = "fieldset glowBorder"> 
-            <form id = "form" class = " glowText" action= "https://www.mail.google.com/" method = "POST">
+            <form id = "form" class = " glowText" action= "contact.html" method = "POST">
                 <label for = "fname"> Your first name:</label>
                 <input type = "text" id = "fname" name = "fname" placeholder = "First name">
                 <label for = "mname"> Your middle name:</label>
@@ -31,18 +44,6 @@
                 <button type = "submit"> Leave the Message </button>
             </form>       
         </fieldset>
-        <div id = "textBox" class = "glowBorder glowText">
-            <p>
-                <h1> HI </h1>
-                If you'd like to contact me  fill out the form on the side and i Will reply to you via email.<br>
-                <h1> OR </h1>
-                <h2> Here's a couple of other places to reach out to me. </h2>
-                <a href = "https://www.instagram.com/blyss.y/"> MY Instagram</a>
-                <a href = "https://github.com/Bliss-y"> My Github</a>
-                <a href = "https://www.artstation.com/restrictednkarki"> My Artstation </a>
-            </p>
-        </div>
-        
         <nav><footer><a class = "glowText" href = "sitereport.html">Site Report</a>  
             <a class = "glowText" href = "index.html">Home</a>
             <a class = "glowText" href = "portfolio.html">My Portfolio</a>
