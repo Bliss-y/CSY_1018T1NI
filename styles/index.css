@@ -10,27 +10,20 @@ body {
 }
 /* menu is the container of menus */
 #menu {
-
     list-style: none;
     z-index: 1;
     position: sticky;
     top: 0;
     right: 0;
     height: 50px;
-    /* positioning the actual menus
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-top: 15px; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
     background-color: rgb(5, 0, 36);
-    /* creating a glowing neon effect with box shadow manupulation */
     padding: 10px;
 }
 /* contains the individual menus */
 .menus {
     /* required for the animation */
     margin-top: 0;
-    position: relative;
     height: 30px;
     width: 100px;
     background-color: transparent;
@@ -44,7 +37,7 @@ body {
     border-style: solid;
     border-color: azure;
 }
-ul{
+#menu ul{
     float: right;
     display: flex;
     list-style: none;
@@ -61,11 +54,6 @@ a {
     color:rgb(84, 0, 95);
 }
 
-footer{
-    clear: both;
-    margin-top: 3vw;
-    width: 100%;
-}
 /* creating a bounce animation for whenever needed : ) */
 @keyframes bounce {
     0%{left: 0; top:0;}
@@ -76,6 +64,7 @@ footer{
 }
 /* to display the page that we're in through menu and added bounce on it */
 #curr {
+    position: relative;
     background-color: rgb(86, 131, 214);
     box-shadow: 0px 0px 3px 3px rgb(206, 255, 255),
         0px 0px 5px 3px  #0ff,
@@ -109,7 +98,10 @@ footer{
     background-color: #050024af;
 }
 
-/* index.html and maybe others as well if i decide to use main */
+/*/////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
+/*///////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
+/*////////////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
+/*/////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 #main {
     margin-left: 5vw;
     z-index: -1;
@@ -130,8 +122,13 @@ footer{
     animation-duration: 10s;
     animation-delay: 2s;
 }
+p {
+    transition-duration:2s;
+}
 
-/* Contact.html  */
+/* ///////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
+/* ////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
+/* ///////////////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* designing the overall form */
 .fieldset{
     float: left;
@@ -176,7 +173,7 @@ input[type = text]{
     font-size: 20px;
     background-color: #00cbe600;
     border: none;
-    border-bottom: rgba(128, 128, 128, 0.712) solid;
+    border-bottom: #808080b6 solid;
     border-bottom-width: 1px;
 }
 
@@ -202,7 +199,7 @@ textarea{
     margin-left: 10px;
     text-align: center;
     margin: 5px;
-    background-color: rgba(26, 6, 90, 0.493);
+    background-color: #1a065a7e;
     font-size: 20px;
     height: max-content;
     width: 95%;
@@ -228,7 +225,7 @@ button:hover{
     box-shadow: 0 2px 3px 0px #2a36da,
          0 5px 0 0 #90d2e6,
         0 5px 0 1px #184a79,
-        0 5px 0 2px rgb(9, 11, 41);
+        0 5px 0 2px #090b29;
     transition-duration: 1s;
 }
 #textBox{
@@ -243,4 +240,116 @@ button:hover{
     margin-right: 5vw;
     color: white;
     text-align: center;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
+#grid-container{
+    position: relative;
+    right: 0vw;
+    animation-name: float;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+    width: max-content;
+    max-width: 90%;
+    left: 5vw;
+    padding: 10px;
+}
+img{
+    /* https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/#:~:text=To%20auto%2Dresize%20an%20image%20or%20a%20video%20to%20fit,resize%20and%20fit%20the%20container. */
+    object-fit:contain;
+    height: 100%;
+    width: 100%;
+}
+.grow{
+    background-color: #044d6ea8;
+    padding: 0;
+    height: 300px;
+    position: relative;
+    width: 40vw;
+    margin: 10px;
+}
+.hover{
+    float: right;
+    object-fit: cover;
+}
+.grow:hover{
+    z-index: 5;
+    height: auto;
+    max-width: 70vw;
+    width: 700px;
+    box-shadow: 0px 0px 1px 2px rgb(255, 206, 206),
+        0px 0px 5px 3px  #ff0000,
+        0 0 1px 1px #ffcece inset,
+        0 0px 5px 3px #ff0000 inset;
+    transition-duration: 1s;
+}
+.textPic{
+    padding: 20%;
+    resize: vertical;
+}
+/*//////////////////////////////////////     CV section                /////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ////////////////////////////////       CV section            /////////////////////////////////////////////////////////////*/
+/* ////////////////////////////              CV section                 / ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////             CV section                   /////////////////////////////////////////////////////////////////////////////////////////////////*/
+#maindiv{
+    height: max-content;
+    max-width: 90vw;
+    background-color: #060614;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 2vw;
+    padding-bottom: 1vw;
+    color: rgb(150, 150, 150);
+}
+#official_image{
+    width: 200px;
+    height: 200px;
+}
+header{
+    display: flex;
+    height: 205px;
+    width: 100%;
+    background-color: #242424;
+    padding-bottom: 0;
+    padding-top: 5px;
+    border: solid #d4d4d4;
+}
+header h1{
+    font-size: 50px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    text-decoration-color:#969696;
+    align-self:center;
+}
+#mainbody{
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: auto auto;
+    width: 95%;
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+.headers{
+    Color: black;
+}
+#mainbody li{
+    border-left: solid #cacaca;
+}
+li h1{
+    width: max-content;
+    border-bottom: solid #cacaca;
+}
+.contents{
+    margin-left: 2vw;
+}
+header a{
+    display: block;
+    font-size: 20px;
+    color:#969696
+
 }
