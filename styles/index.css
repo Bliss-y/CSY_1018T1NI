@@ -1,57 +1,68 @@
 /* this part is constant for all the pages since it the basic layout for the site */
+/* https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_cols */
+
 body {
     /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
-    background-image: url("images/eren-arik-g1.png"); /* to give a certain flow to background */
-    /* the repetition of image is cancelled */
-    background-repeat: no-repeat;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 
     margin: 0;
+}
+
+/* Grid layout */
+.layout{
+    display: grid;
+    grid-template-areas: 'header header';
+    grid-template-columns: auto 80%;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+header{
+    grid-area: header;
+    color:rgb(150, 150, 150);
+    border-bottom: solid #333333;
+    background-color: #222222;
+    height: 80px;
+    text-align: center;
 }
 /* menu is the container of menus */
 #menu {
     list-style: none;
     z-index: 1;
-    position: sticky;
-    top: 0;
-    right: 0;
-    height: 50px;
+    height: 80h;
+    /* top: 0;
+    right: 0; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
-    background-color: rgb(5, 0, 36);
-    padding: 10px;
+    background-color: rgb(26, 26, 27);
+    padding: 0 5px;
 }
 /* contains the individual menus */
 .menus {
     /* required for the animation */
     margin-top: 0;
-    height: 30px;
-    width: 100px;
+    width: 100%;
     background-color: transparent;
     text-align: center;
-    padding-top: 5px;
-    /* creating the same glowing effect */
-    box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
-        0px 0px 3px 3px  #0ff,
-        0 0 1px 1px rgb(206, 255, 255)inset,
-        0 0px 3px 3px #0ff inset;
+    padding: 10px 0;
     border-style: solid;
-    border-color: azure;
+    border-color: rgb(112, 112, 112);
 }
+
 #menu ul{
-    float: right;
-    display: flex;
+    position: sticky;
     list-style: none;
+    padding: 0;
+    width: 100%;
 }
 .menus:hover{
     /* small animation on hover */
     text-shadow: none;
     transition-duration: 0.5s;
-    background-color: rgb(139, 241, 255);
+    background-color: rgb(46, 46, 46);
 }
 
 a {
     margin-left: 20px;
-    color:rgb(84, 0, 95);
+    color:rgb(175, 175, 175);
 }
 
 /* creating a bounce animation for whenever needed : ) */
@@ -65,13 +76,9 @@ a {
 /* to display the page that we're in through menu and added bounce on it */
 #curr {
     position: relative;
-    background-color: rgb(86, 131, 214);
-    box-shadow: 0px 0px 3px 3px rgb(206, 255, 255),
-        0px 0px 5px 3px  #0ff,
-        0 0 3px 3px rgb(206, 255, 255)inset,
-        0 0px 5px 3px #0ff inset;
-        animation-name: bounce;
-        animation-duration: 1s;
+    background-color: rgb(128, 128, 128);
+    animation-name: bounce;
+    animation-duration: 1s;
 }
 .glowText{
     /* making text glow as well */
@@ -89,6 +96,15 @@ a {
     80%{ right: 0; top: 0.2;}
     100% { right:0; top: 0; }
 }
+#main {
+    padding: 20px;
+    text-align: center;
+    /* width: max-content; */
+    background-color: rgb(15, 15, 15);
+    position: relative;
+    animation-duration: 10s;
+    color:rgb(209, 214, 214)
+}
 
 .glowBorder{
     box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
@@ -102,19 +118,6 @@ a {
 /*///////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*////////////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*/////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
-#main {
-    margin-left: 5vw;
-    z-index: -1;
-    padding: 20px;
-    text-align: center;
-    max-width: 90%;
-    width: max-content;
-    background-image:radial-gradient( #0634ff00 75%, #13bfd680);
-    position: relative;
-    animation-name: float;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
 .floaters{
     font-size: 80px;
     animation-name: float;
@@ -131,66 +134,59 @@ p {
 /* ///////////////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* designing the overall form */
 .fieldset{
-    float: left;
-    margin-left: 5vw;
-    height: max-content;
-    max-width: 40%;
-    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
     /* for animation */
     position: relative;
     /* animation declared top */
-    animation-name: float;
-    animation-duration: 10s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    padding: 20px;
-    border: none;
+    background-color: rgb(46, 46, 46);
+}
+legend{
+    align-self: left;
 }
 
 form{
     /* aligning all the text and inputs so it looks good ") */
-    text-align: center;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    color: black;
+    color: rgb(172, 172, 172);
+    float: left;
+    height: max-content;
+    background-color: rgb(22, 22, 22);
 }
 
 input[type = text]{
     /* aligning the inputs with text */
     align-self: center;
-    text-align: center;
     margin: 5px;
     height: 50px;
     width: max-content;
     color: inherit;
+    color: #ffffff
     padding: 0;
-    text-shadow: 0 0 3px #fff,
-        0 0 5px rgb(255, 255, 255),
-        0 0 5px #00e6e6, 0 0 8px #00e6d3,
-        0 0 10px #00dee6, 0 0 14px #00cbe6,
-        0 0 18px #00d7e6;
     font-size: 20px;
-    background-color: #00cbe600;
+    background-color: #929292;
     border: none;
     border-bottom: #808080b6 solid;
     border-bottom-width: 1px;
 }
 
 input:focus, textarea:focus{
-    color: inherit;
+    background-color: rgb(175, 72, 72);
     text-shadow: 0 0 3px #fff,
         0 0 5px rgb(255, 255, 255),
-        0 0 5px #e60000, 0 0 8px #e60000,
-        0 0 10px #e60000, 0 0 14px #e60000,
-        0 0 18px #e60000;
+        0 0 5px #a0a0a0, 0 0 8px #858585,
+        0 0 10px #7a7a7a, 0 0 14px #414141,
+        0 0 18px #424242;
     outline: none;
     text-align: center;
     /* box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
         0px 0px 3px 3px  #0ff,
         0 0 1px 1px rgb(206, 255, 255)inset,
         0 0px 3px 3px #0ff inset; */
-    box-shadow: 0 -2px 3px 2px red inset;
+    box-shadow: 0 -2px 3px 2px rgb(138, 138, 138) inset;
     background-color: #f3353500;
     transition-duration: 0.5s;
 }
@@ -231,35 +227,23 @@ button:hover{
 #textBox{
     padding: 20px;
     position: relative;
-    width: 50vw;
-    height: max-content;
-    float: right;
-    animation-name: float;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-right: 5vw;
     color: white;
     text-align: center;
+    width: 40%
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
-#grid-container{
+#portfolio{
     position: relative;
-    right: 0vw;
-    animation-name: float;
-    animation-duration: 10s;
     animation-iteration-count: infinite;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-row-gap: 20px;
-    width: max-content;
-    max-width: 90%;
-    left: 5vw;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 img{
     /* https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/#:~:text=To%20auto%2Dresize%20an%20image%20or%20a%20video%20to%20fit,resize%20and%20fit%20the%20container. */
-    object-fit:contain;
+    object-fit:scale-down;
     height: 100%;
     width: 100%;
 }
@@ -269,87 +253,80 @@ img{
     height: 300px;
     position: relative;
     width: 40vw;
-    margin: 10px;
 }
 .hover{
-    float: right;
     object-fit: cover;
 }
 .grow:hover{
-    z-index: 5;
+    z-index: 1;
     height: auto;
-    max-width: 70vw;
     width: 700px;
     box-shadow: 0px 0px 1px 2px rgb(255, 206, 206),
         0px 0px 5px 3px  #ff0000,
         0 0 1px 1px #ffcece inset,
         0 0px 5px 3px #ff0000 inset;
-    transition-duration: 1s;
 }
 .textPic{
-    padding: 20%;
+    padding-top: 50px;
+    width: 40%;
+    max-width: max-content;
     resize: vertical;
 }
+
 /*//////////////////////////////////////     CV section                /////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ////////////////////////////////       CV section            /////////////////////////////////////////////////////////////*/
 /* ////////////////////////////              CV section                 / ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////             CV section                   /////////////////////////////////////////////////////////////////////////////////////////////////*/
-#maindiv{
-    height: max-content;
-    max-width: 90vw;
-    background-color: #060614;
-    margin-top: 2vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    padding: 2vw;
-    padding-bottom: 1vw;
-    color: rgb(150, 150, 150);
-}
 #official_image{
     width: 200px;
     height: 200px;
 }
-header{
+
+.cvhead{
     display: flex;
-    height: 205px;
+    flex-wrap: wrap;
     width: 100%;
     background-color: #242424;
     padding-bottom: 0;
     padding-top: 5px;
-    border: solid #d4d4d4;
+    border: solid #8a8a8a;
 }
-header h1{
+.cvhead h1{
     font-size: 50px;
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-thickness: 2px;
     text-decoration-color:#969696;
-    align-self:center;
 }
-#mainbody{
-    display: grid;
+#cvbody{
+    display: flex;
+    flex-wrap: wrap;
     font-size: 20px;
     grid-template-columns: auto auto;
-    width: 95%;
-    background-color: #aaaaaa;
-    color: #ffffff;
+    width: 100%;
+    background-color: #777676;
+    color: #c3c2c2;
 }
 .headers{
     Color: black;
 }
-#mainbody li{
-    border-left: solid #cacaca;
+#cvbody, ul{
+    padding: 0;
+    width: 100%;
+}
+.topics{
+    margin:  20px;
 }
 li h1{
-    width: max-content;
-    border-bottom: solid #cacaca;
+    border-bottom: solid #e4e4e4;
+    max-width: 30%;
 }
 .contents{
-    margin-left: 2vw;
+    border: solid #e4e4e4;
+    border-left: solid #cacaca;
 }
 header a{
     display: block;
     font-size: 20px;
     color:#969696
-
 }

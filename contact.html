@@ -9,40 +9,48 @@
         </title>
     </head>
     <body>
-        <nav id = "menu" class = "glowText glowBorder">
-            <ul>
-                <a href = "index.html"><li class = "menus"> Home </li></a>
-                <a href = "portfolio.html"><li class = "menus"> My Portfolio </li> </a>
-                <a href = "contact.html"><li id = "curr" class = "menus"> Contact ME </li> </a>
-                <a href = "cv.html"><li class = "menus"> C.V </li>  </a>
-                <a href = "sitereport.html"><li class = "menus"> Site Report </li></a>  
-            </ul>
-        </nav>
-        <div id = "textBox" class = "glowBorder glowText">
-            <p>
-                <h1> HI </h1>
-                <h3>If you'd like to contact me  fill out the form on the side and i Will reply to you via email.</h3><br>
-                <h2> OR </h1>
-                <h3> Here's a couple of other places to reach out to me. </h3>
-                <a href = "https://www.instagram.com/blyss.y/"> MY Instagram</a>
-                <a href = "https://github.com/Bliss-y"> My Github</a>
-                <a href = "https://www.artstation.com/restrictednkarki"> My Artstation </a>
-            </p>
+        <div class = "layout">
+            <header></header>
+            <nav id = "menu">
+                <ul>
+                    <a href = "index.html"><li class = "menus"> Home </li></a>
+                    <a href = "portfolio.html"><li class = "menus"> My Portfolio </li> </a>
+                    <a href = "contact.html"><li id = "curr" class = "menus"> Contact ME </li> </a>
+                    <a href = "cv.html"><li class = "menus"> C.V </li>  </a>
+                    <a href = "sitereport.html"><li class = "menus"> Site Report </li></a>  
+                </ul>
+            </nav>
+            <div id = "main">
+                
+                <fieldset class = "fieldset"> 
+                    <legend> Contact ME</legend>
+                    <div id = "textBox">
+                        <p>
+                            <h1> HI </h1>
+                            <h3>If you'd like to contact me  fill out the form on the side and i Will reply to you via email.</h3><br>
+                            <h2> OR </h1>
+                            <h3> Here's a couple of other places to reach out to me. </h3>
+                            <a href = "https://www.instagram.com/blyss.y/"> MY Instagram</a>
+                            <a href = "https://github.com/Bliss-y"> My Github</a>
+                            <a href = "https://www.artstation.com/restrictednkarki"> My Artstation </a>
+                        </p>
+                    </div> 
+                    <form id = "form" action= "contact.html" method = "POST">
+                        <label for = "fname"> Your first name:</label>
+                        <input type = "text" id = "fname" name = "fname" placeholder = "First name">
+                        <label for = "mname"> Your middle name:</label>
+                        <input type = "text" name = "mname" id = "mname" placeholder = "Middle name">
+                        <label for = "lname"> Your last name:</label>
+                        <input type = "text" name = "lname" id = "lname" placeholder = "Last name">
+                        <label for = "email"> Leave your email:</label>
+                        <input type = "text" name = "email"  id = "email" placeholder = "E-mail">
+                        <label for = "message"> Write your message below:</label>
+                        <textarea id = "message" class = "glowText" name = "message" form = "form" placeholder = "Write your message here"></textarea>
+                        <button type = "submit"> Leave the Message </button>
+                        
+                    </form>      
+                </fieldset>
+            </div>
         </div>
-        <fieldset class = "fieldset glowBorder"> 
-            <form id = "form" class = " glowText" action= "contact.html" method = "POST">
-                <label for = "fname"> Your first name:</label>
-                <input type = "text" id = "fname" name = "fname" placeholder = "First name">
-                <label for = "mname"> Your middle name:</label>
-                <input type = "text" name = "mname" id = "mname" placeholder = "Middle name">
-                <label for = "lname"> Your last name:</label>
-                <input type = "text" name = "lname" id = "lname" placeholder = "Last name">
-                <label for = "email"> Leave your email:</label>
-                <input type = "text" name = "email"  id = "email" placeholder = "E-mail">
-                <label for = "message"> Write your message below:</label>
-                <textarea id = "message" class = "glowText" name = "message" form = "form" placeholder = "Write your message here"></textarea>
-                <button type = "submit"> Leave the Message </button>
-            </form>       
-        </fieldset>
     </body>
 </html>
