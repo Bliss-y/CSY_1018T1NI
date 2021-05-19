@@ -38,6 +38,14 @@ header{
     background-color: rgb(26, 26, 27);
     padding: 0 5px;
 }
+/* hamburger section */
+#hamburger{
+    width: 30px;
+    height: 30px;
+    background-color: #696969;
+    display: none;
+}
+
 
 /* contains the individual menus */
 
@@ -355,16 +363,29 @@ header a{
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media screen and ( max-width: 500px ){
+    
     header{
         grid-area: 1/ span 2;
     }
+
     #menu{
         grid-area: 2/ span 2/ 2 / span 1;
     }
+    
     #main{
         grid-area: 3/ span 2 / 3/ span 1;
     }
+
     .topics{
         width: 100%;
     }
+
+    #menu .drop{
+        visibility: visible;
+    }
+
+    #hamburger{
+        display: block;
+    }
+
 }
