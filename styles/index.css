@@ -16,6 +16,7 @@ body {
     column-gap: 5px;
     row-gap: 5px;
 }
+
 header{
     grid-area: header;
     color:rgb(150, 150, 150);
@@ -24,7 +25,9 @@ header{
     height: 80px;
     text-align: center;
 }
+
 /* menu is the container of menus */
+
 #menu {
     list-style: none;
     z-index: 1;
@@ -35,7 +38,9 @@ header{
     background-color: rgb(26, 26, 27);
     padding: 0 5px;
 }
+
 /* contains the individual menus */
+
 .menus {
     /* required for the animation */
     margin-top: 0;
@@ -73,13 +78,18 @@ a {
     75%{left: 0; top : -5px;}
     100%{left: 0; top : 0;}
 }
+
+
 /* to display the page that we're in through menu and added bounce on it */
+
 #curr {
     position: relative;
     background-color: rgb(128, 128, 128);
     animation-name: bounce;
     animation-duration: 1s;
 }
+
+
 .glowText{
     /* making text glow as well */
     text-shadow: 0 0 3px #fff,
@@ -88,6 +98,7 @@ a {
         0 0 10px #00dee6, 0 0 14px #00cbe6,
         0 0 18px #00d7e6;
 }
+
 @keyframes float {
     0%{ right:0; top: 0;}
     20%{ right: 2vw; }
@@ -96,6 +107,7 @@ a {
     80%{ right: 0; top: 0.2;}
     100% { right:0; top: 0; }
 }
+
 #main {
     padding: 20px;
     text-align: center;
@@ -104,14 +116,6 @@ a {
     position: relative;
     animation-duration: 10s;
     color:rgb(209, 214, 214)
-}
-
-.glowBorder{
-    box-shadow: 0px 0px 1px 2px rgb(206, 255, 255),
-        0px 0px 5px 3px  #0ff,
-        0 0 1px 1px #ceffff inset,
-        0 0px 5px 3px #0ff inset;
-    background-color: #050024af;
 }
 
 /*/////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
@@ -148,7 +152,7 @@ legend{
 
 form{
     /* aligning all the text and inputs so it looks good ") */
-    width: 40%;
+    width: max-content;
     display: flex;
     flex-direction: column;
     color: rgb(172, 172, 172);
@@ -164,28 +168,20 @@ input[type = text]{
     height: 50px;
     width: max-content;
     color: inherit;
-    color: #ffffff
+    color: #ffffff;
     padding: 0;
     font-size: 20px;
-    background-color: #929292;
+    background-color: #92929200;
     border: none;
     border-bottom: #808080b6 solid;
     border-bottom-width: 1px;
 }
 
 input:focus, textarea:focus{
-    background-color: rgb(175, 72, 72);
-    text-shadow: 0 0 3px #fff,
-        0 0 5px rgb(255, 255, 255),
-        0 0 5px #a0a0a0, 0 0 8px #858585,
-        0 0 10px #7a7a7a, 0 0 14px #414141,
-        0 0 18px #424242;
+    background-color: #ffffff;
+    color:rgb(209, 214, 214);
     outline: none;
     text-align: center;
-    /* box-shadow: 0px 0px 1px 1px rgb(206, 255, 255),
-        0px 0px 3px 3px  #0ff,
-        0 0 1px 1px rgb(206, 255, 255)inset,
-        0 0px 3px 3px #0ff inset; */
     box-shadow: 0 -2px 3px 2px rgb(138, 138, 138) inset;
     background-color: #f3353500;
     transition-duration: 0.5s;
@@ -195,7 +191,7 @@ textarea{
     margin-left: 10px;
     text-align: center;
     margin: 5px;
-    background-color: #1a065a7e;
+    background-color: #4444447e;
     font-size: 20px;
     height: max-content;
     width: 95%;
@@ -206,7 +202,7 @@ textarea{
 button{
     margin-top: 3px;
     align-self: center;
-    background-color: #2a36da;
+    background-color: #626262;
     border: none;
     width: 40%;
     height: 40px;
@@ -215,12 +211,12 @@ button{
 
 button:hover{
     transform: translate(0, -4px);
-    background-color: #7e95f8;
+    background-color: #818181;
     border-style: solid;
     border-color: white;
-    box-shadow: 0 2px 3px 0px #2a36da,
-         0 5px 0 0 #90d2e6,
-        0 5px 0 1px #184a79,
+    box-shadow: 0 2px 3px 0px #080808,
+         0 5px 0 0 #131313,
+        0 5px 0 1px #3b3b3b,
         0 5px 0 2px #090b29;
     transition-duration: 1s;
 }
@@ -229,7 +225,7 @@ button:hover{
     position: relative;
     color: white;
     text-align: center;
-    width: 40%
+    width: 60%;
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
@@ -298,35 +294,76 @@ img{
     text-decoration-thickness: 2px;
     text-decoration-color:#969696;
 }
+
 #cvbody{
     display: flex;
     flex-wrap: wrap;
     font-size: 20px;
     grid-template-columns: auto auto;
     width: 100%;
-    background-color: #777676;
+    background-color: #1b1b1b;
     color: #c3c2c2;
 }
+
 .headers{
     Color: black;
 }
+
 #cvbody, ul{
     padding: 0;
     width: 100%;
 }
+
 .topics{
     margin:  20px;
+    width: 100%;
 }
+
 li h1{
     border-bottom: solid #e4e4e4;
-    max-width: 30%;
+    max-width: 100%;
 }
+
 .contents{
     border: solid #e4e4e4;
     border-left: solid #cacaca;
 }
+
 header a{
     display: block;
     font-size: 20px;
     color:#969696
+}
+
+#links li{
+    list-style: circle inside none;
+    text-align: center;
+    align-self: center;
+}
+
+/*//////////////////////////////////////     Site Report                /////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ////////////////////////////////       Site Report              /////////////////////////////////////////////////////////////*/
+/* ////////////////////////////              Site Report                   / ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////           Site Report                    /////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+/* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media screen and ( max-width: 500px ){
+    header{
+        grid-area: 1/ span 2;
+    }
+    #menu{
+        grid-area: 2/ span 2/ 2 / span 1;
+    }
+    #main{
+        grid-area: 3/ span 2 / 3/ span 1;
+    }
+    .topics{
+        width: 100%;
+    }
 }
