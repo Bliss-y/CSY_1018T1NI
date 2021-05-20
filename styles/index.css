@@ -4,7 +4,6 @@
 body {
     /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
     background-color: rgb(20, 20, 20);
-
     margin: 0;
 }
 
@@ -53,14 +52,12 @@ header{
 }
 
 #menu ul{
-    position: sticky;
     list-style: none;
     padding: 0;
     width: 100%;
 }
 .menus:hover{
     /* small animation on hover */
-    text-shadow: none;
     transition-duration: 0.5s;
     background-color: rgb(46, 46, 46);
 }
@@ -72,11 +69,11 @@ a {
 
 /* creating a bounce animation for whenever needed : ) */
 @keyframes bounce {
-    0%{left: 0; top:0;}
-    25%{left: 0; top: -10px;}
-    50%{left: 0; top : 0;}
-    75%{left: 0; top : -5px;}
-    100%{left: 0; top : 0;}
+    0%{top:0;}
+    25%{top: -10px;}
+    50%{top : 0;}
+    75%{top : -5px;}
+    100%{top : 0;}
 }
 
 
@@ -129,6 +126,7 @@ a {
     animation-duration: 10s;
     animation-delay: 2s;
 }
+
 p {
     transition-duration:2s;
 }
@@ -146,13 +144,10 @@ p {
     /* animation declared top */
     background-color: rgb(46, 46, 46);
 }
-legend{
-    align-self: left;
-}
 
 form{
     /* aligning all the text and inputs so it looks good ") */
-    width: max-content;
+    /* width: max-content; */
     display: flex;
     flex-direction: column;
     color: rgb(172, 172, 172);
@@ -186,6 +181,7 @@ input:focus, textarea:focus{
     background-color: #f3353500;
     transition-duration: 0.5s;
 }
+
 textarea{
     color: inherit;
     margin-left: 10px;
