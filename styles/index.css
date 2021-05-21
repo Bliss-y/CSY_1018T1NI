@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+#hamCon input{
+    display: none;
+}
+
 /* Grid layout */
 .layout{
     display: grid;
@@ -366,6 +370,7 @@ header a{
     
     header{
         grid-area: 1/ span 2;
+        z-index: 2;
     }
 
     #menu{
@@ -376,16 +381,55 @@ header a{
         grid-area: 3/ span 2 / 3/ span 1;
     }
 
+    #drop{
+        transform-origin: 0% 0%;
+        display: none;
+        z-index: 1;
+        margin: 0;
+        background-color: #1b1b1b;
+        
+    }
+    #hamburger{
+        margin-bottom: 0;
+        display: inline-block;
+        z-index: -1;
+        position: relative;
+        transform: translate(-100%, 5%);
+    }
+
+    #hamCon input{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        margin-top: 5px;
+        opacity: 0;
+    }
+
+    #hamCon input:checked ~ #drop{
+        display: block;
+        animation-name: slideDown;
+        animation-duration: 0.5s;
+    }
+    @keyframes slideDown {
+        from{transform: scale(0);}
+        to{
+            transform: scale(1);
+        }
+    }
     .topics{
         width: 100%;
     }
-
-    #menu .drop{
-        visibility: visible;
+    #main{
+        padding: 2px;
     }
-
-    #hamburger{
-        display: block;
+    .cvhead{
+        border-left: none;
+        border-right: none;
+    }
+    #cvbody{
+        margin: 0;
+        width: 100%;
     }
 
 }
