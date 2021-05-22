@@ -46,10 +46,15 @@ header{
 #hamburger{
     width: 30px;
     height: 30px;
-    background-color: #696969;
     display: none;
+    padding-top: 3px;
 }
-
+#lines{
+    width: 25px;
+    margin: 3px;
+    height: 4px;
+    background-color: white;
+}
 
 /* contains the individual menus */
 
@@ -411,6 +416,12 @@ header a{
         animation-name: slideDown;
         animation-duration: 0.5s;
     }
+    #hamCon input:checked ~ #hamburger{
+        border: solid #6a6a6b;
+        background-color: rgb(61, 61, 61);
+        transition-duration: 1s;
+    }
+    
     @keyframes slideDown {
         from{transform: scale(0);}
         to{
