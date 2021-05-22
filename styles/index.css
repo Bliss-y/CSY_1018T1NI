@@ -137,23 +137,26 @@ p {
 /* designing the overall form */
 .fieldset{
     display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    /* for animation */
-    position: relative;
-    /* animation declared top */
-    background-color: rgb(46, 46, 46);
-}
-
-form{
-    /* aligning all the text and inputs so it looks good ") */
-    /* width: max-content; */
-    display: flex;
     flex-direction: column;
     color: rgb(172, 172, 172);
     float: left;
     height: max-content;
+    width: 40%;
     background-color: rgb(22, 22, 22);
+    
+}
+
+#form{
+    /* aligning all the text and inputs so it looks good ") */
+    /* width: max-content; */
+    display: flex;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    width: 100%;
+    /* for animation */
+    position: relative;
+    /* animation declared top */
+    background-color: rgb(46, 46, 46);
 }
 
 input[type = text]{
@@ -190,7 +193,7 @@ textarea{
     background-color: #4444447e;
     font-size: 20px;
     height: max-content;
-    width: 95%;
+    width: 80%;
     resize: vertical;
     min-height: 30px;
 }
@@ -225,14 +228,6 @@ button:hover{
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
-#portfolio{
-    position: relative;
-    animation-iteration-count: infinite;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
 img{
     /* https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/#:~:text=To%20auto%2Dresize%20an%20image%20or%20a%20video%20to%20fit,resize%20and%20fit%20the%20container. */
     object-fit:scale-down;
@@ -243,8 +238,10 @@ img{
     background-color: #044d6ea8;
     padding: 0;
     height: 300px;
-    position: relative;
-    width: 40vw;
+    width: 45%;
+    margin-bottom: 30px;
+    margin: 2%;
+    float: left;
 }
 .hover{
     object-fit: cover;
@@ -252,18 +249,22 @@ img{
 .grow:hover{
     z-index: 1;
     height: auto;
-    width: 700px;
+    transform: scale(1);
     box-shadow: 0px 0px 1px 2px rgb(255, 206, 206),
         0px 0px 5px 3px  #ff0000,
         0 0 1px 1px #ffcece inset,
         0 0px 5px 3px #ff0000 inset;
+    transition-duration: 0.5s;
 }
 .textPic{
-    padding-top: 50px;
-    width: 40%;
-    max-width: max-content;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
     resize: vertical;
+    text-align: center;
+    font-size: 40px;
 }
+
 
 /*//////////////////////////////////////     CV section                /////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ////////////////////////////////       CV section            /////////////////////////////////////////////////////////////*/
@@ -361,5 +362,20 @@ header a{
     }
     .topics{
         width: 100%;
+    }
+    .grow{
+        width: 100%;
+        height: auto;
+    }
+    .grow:hover{
+        width: 100%;
+        box-shadow: none;
+        transform: none;
+    }
+    .hover{
+        object-fit: contain;
+    }
+    .textPic{
+        font-size: 20px;
     }
 }
