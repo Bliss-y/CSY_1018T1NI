@@ -4,12 +4,7 @@
 body {
     /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
     background-color: rgb(20, 20, 20);
-
     margin: 0;
-}
-
-#hamCon input{
-    display: none;
 }
 
 /* Grid layout */
@@ -34,7 +29,6 @@ header{
 
 #menu {
     list-style: none;
-    z-index: 1;
     height: 80h;
     /* top: 0;
     right: 0; */
@@ -70,7 +64,6 @@ header{
 }
 
 #menu ul{
-    position: sticky;
     list-style: none;
     padding: 0;
     width: 100%;
@@ -78,7 +71,6 @@ header{
 
 .menus:hover{
     /* small animation on hover */
-    text-shadow: none;
     transition-duration: 0.5s;
     background-color: rgb(46, 46, 46);
 }
@@ -90,11 +82,11 @@ a {
 
 /* creating a bounce animation for whenever needed : ) */
 @keyframes bounce {
-    0%{left: 0; top:0;}
-    25%{left: 0; top: -10px;}
-    50%{left: 0; top : 0;}
-    75%{left: 0; top : -5px;}
-    100%{left: 0; top : 0;}
+    0%{top:0;}
+    25%{top: -10px;}
+    50%{top : 0;}
+    75%{top : -5px;}
+    100%{top : 0;}
 }
 
 
@@ -147,6 +139,7 @@ a {
     animation-duration: 10s;
     animation-delay: 2s;
 }
+
 p {
     transition-duration:2s;
 }
@@ -164,12 +157,10 @@ p {
     /* animation declared top */
     background-color: rgb(46, 46, 46);
 }
-legend{
-    align-self: left;
-}
 
 form{
     /* aligning all the text and inputs so it looks good ") */
+
     width: max-content;
     display: flex;
     flex-direction: column;
@@ -204,6 +195,7 @@ input:focus, textarea:focus{
     background-color: #f3353500;
     transition-duration: 0.5s;
 }
+
 textarea{
     color: inherit;
     margin-left: 10px;
@@ -238,6 +230,7 @@ button:hover{
         0 5px 0 2px #090b29;
     transition-duration: 1s;
 }
+
 #textBox{
     padding: 20px;
     position: relative;
@@ -245,6 +238,7 @@ button:hover{
     text-align: center;
     width: 60%;
 }
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
 #portfolio{
@@ -255,12 +249,14 @@ button:hover{
     justify-content: space-evenly;
     margin-bottom: 10px;
 }
+
 img{
     /* https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/#:~:text=To%20auto%2Dresize%20an%20image%20or%20a%20video%20to%20fit,resize%20and%20fit%20the%20container. */
     object-fit:scale-down;
     height: 100%;
     width: 100%;
 }
+
 .grow{
     background-color: #044d6ea8;
     padding: 0;
@@ -268,9 +264,11 @@ img{
     position: relative;
     width: 40vw;
 }
+
 .hover{
     object-fit: cover;
 }
+
 .grow:hover{
     z-index: 1;
     height: auto;
@@ -280,6 +278,7 @@ img{
         0 0 1px 1px #ffcece inset,
         0 0px 5px 3px #ff0000 inset;
 }
+
 .textPic{
     padding-top: 50px;
     width: 40%;
@@ -305,6 +304,7 @@ img{
     padding-top: 5px;
     border: solid #8a8a8a;
 }
+
 .cvhead h1{
     font-size: 50px;
     text-decoration: underline;
@@ -394,6 +394,7 @@ header a{
         background-color: #1b1b1b;
         
     }
+  
     #hamburger{
         margin-bottom: 0;
         display: inline-block;
@@ -416,6 +417,7 @@ header a{
         animation-name: slideDown;
         animation-duration: 0.5s;
     }
+  
     #hamCon input:checked ~ #hamburger{
         border: solid #6a6a6b;
         background-color: rgb(61, 61, 61);
@@ -428,19 +430,23 @@ header a{
             transform: scale(1);
         }
     }
+  
     .topics{
         width: 100%;
     }
+  
     #main{
         padding: 2px;
     }
+  
     .cvhead{
         border-left: none;
         border-right: none;
     }
+  
     #cvbody{
         margin: 0;
         width: 100%;
     }
-
+  
 }
