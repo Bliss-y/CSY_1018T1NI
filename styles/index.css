@@ -1,5 +1,8 @@
 /* this part is constant for all the pages since it the basic layout for the site */
 /* https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_cols */
+*{
+    box-sizing: border-box;
+}
 
 body {
     /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
@@ -13,14 +16,14 @@ body {
 /* Grid layout */
 .layout{
     display: grid;
-    grid-template-areas: 'header header';
     grid-template-columns: auto 80%;
+    max-width: 100%;
     column-gap: 5px;
     row-gap: 5px;
 }
 
 header{
-    grid-area: header;
+    grid-area: 1/1/span 1/span 2;
     color:rgb(150, 150, 150);
     border-bottom: solid #333333;
     background-color: #222222;
@@ -32,7 +35,7 @@ header{
 
 #menu {
     list-style: none;
-    height: 80h;
+    height: 80vh;
     /* top: 0;
     right: 0; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
@@ -47,7 +50,7 @@ header{
     display: none;
     padding-top: 3px;
 }
-#lines{
+.lines{
     width: 25px;
     margin: 3px;
     height: 4px;
@@ -55,10 +58,14 @@ header{
 }
 
 /* contains the individual menus */
+#menu li{
+    width: 100%;
+}
 
 .menus {
     /* required for the animation */
-    margin-top: 0;
+    margin: 0;
+    display: block;
     width: 100%;
     background-color: transparent;
     text-align: center;
@@ -118,7 +125,6 @@ a {
     20%{ right: 2vw; }
     40%{ right: 2vw; top: 2vw;}
     60%{ right: -2vw; top: 0.5vw; }
-    80%{ right: 0; top: 0.2;}
     100% { right:0; top: 0; }
 }
 
@@ -127,9 +133,10 @@ a {
     text-align: center;
     /* width: max-content; */
     background-color: rgb(15, 15, 15);
-    position: relative;
     animation-duration: 10s;
-    color:rgb(209, 214, 214)
+    color:rgb(209, 214, 214);
+    height: 90vh;
+    overflow-y: auto;
 }
 
 /*/////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
@@ -137,7 +144,7 @@ a {
 /*////////////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*/////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 .floaters{
-    font-size: 80px;
+    font-size: 14vw;
     animation-name: float;
     position: relative;
     animation-duration: 10s;
@@ -153,40 +160,27 @@ p {
 /* ///////////////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* designing the overall form */
 .fieldset{
-    width: max-content;
+        /* aligning all the text and inputs so it looks good ") */
+    /* width: max-content; */
     display: flex;
     flex-direction: column;
     color: rgb(172, 172, 172);
     float: left;
     height: max-content;
-    width: 40%;
-    background-color: rgb(22, 22, 22);
-    
+    max-width: 100vw;
 }
 
-#form{
-    /* aligning all the text and inputs so it looks good ") */
-    /* width: max-content; */
-    display: flex;
-    padding: 5px 0;
-    flex-wrap: wrap;
-    width: 100%;
-    /* for animation */
-    position: relative;
-    /* animation declared top */
-    background-color: rgb(46, 46, 46);
-}
 
 input[type = text]{
     /* aligning the inputs with text */
     align-self: center;
     margin: 5px;
     height: 50px;
-    width: max-content;
     color: inherit;
     color: #ffffff;
     padding: 0;
-    font-size: 20px;
+    font-size: 30px;
+    max-width: 100vw;
     background-color: #92929200;
     border: none;
     border-bottom: #808080b6 solid;
@@ -243,7 +237,7 @@ button:hover{
     position: relative;
     color: white;
     text-align: center;
-    width: 60%;
+    width: 100%;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
@@ -320,8 +314,6 @@ img{
 .cvhead h1{
     font-size: 50px;
     text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-thickness: 2px;
     text-decoration-color:#969696;
 }
 
@@ -384,18 +376,24 @@ header a{
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media screen and ( max-width: 500px ){
+    .layout{
+        grid-template-columns: auto;
+    }
 
     header{
-        grid-area: 1/ span 2;
+        grid-area: 1/1;
     }
 
     #menu{
-        grid-area: 2/ span 2/ 2 / span 1;
+        grid-area: 2/1;
+        height: initial;
     }
     
     #main{
-        grid-area: 3/ span 2 / 3/ span 1;
-    }
+        grid-area: 3/1;
+        max-width: 100%;
+        padding: 2px;
+    } 
 
     #drop{
         transform-origin: 0% 0%;
@@ -463,9 +461,6 @@ header a{
         font-size: 20px;
     }
 
-    #main{
-        padding: 2px;
-    }
 
     .cvhead{
         border-left: none;
@@ -474,6 +469,15 @@ header a{
 
     #cvbody{
         margin: 0;
+        width: 100%;
+    }
+    input[type = text]{
+        font-size: 5vw;
+    }
+    form{
+        width: 100%;
+    }
+    .fieldset{
         width: 100%;
     }
 }
