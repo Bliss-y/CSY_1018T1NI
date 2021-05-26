@@ -2,6 +2,7 @@
 <html lang = "en">
     <head>
         <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href= "styles/index.css">
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <link rel = "stylesheet" type="text/css" href= "styles/index.css">
         <title>
@@ -31,7 +32,122 @@
                 </div>
             </nav>
             <div id = "main">
-                    
+                    <div class = "repCon">
+                        <h1> Site Report </h1>
+                        <h2 class = "headings"> Abstract </h2>
+                        <p class = "contents"> 
+                        This website is my submission for the College Assessment Assignment given By the Northampton University.
+                        The goal was to create a responsive website to show my portfolio and CV.
+                             There are 5 pages: </p>
+                             <ol>
+                                 <li><a href="index.html"> Home </a></li>
+                                 <li><a href="portfolio.html"> Portfolio </a></li>
+                                 <li><a href="contact.html"> Contact </a></li>
+                                 <li><a href="cv.html"> CV </a></li>
+                                 <li><a href="#"> Site Report (This Page) </a></li>
+                             </ol>
+                             <p class = "contents">
+                                 This is the final report of the website with all details of it's creation as well as my personal logs.
+                                  The report shows not only the development of the website but also my personal growth as a developer.
+                                  It includes different challenges and obstacles encountered during the development of the website.
+
+                            </p>
+                             <h2 class = "headings"> Objectives </h2>
+                             <p class = "contents">
+                                 </p>
+                                <ol>
+                                    <li> To Test My HTML and CSS skills. </li>
+                                    <li> To Create a functional and well-designed website. </li>
+                                    <li> To get knowledge about fundamentals of building websites. </li>
+                                    <li> To get knowledge about the webpages and how they work. </li>
+                                    <li> To learn Git and make optimal use of it's function. </li>
+                                </ol>
+
+                             <h2 class = "headings"> Creating the Website </h2>
+                             <p class = "contents">
+                                
+                                Although the initial theme for the website was stars-wars/ cyberpunk, half way through the development i Issued a major change to it by taking it to a whole different direction which is the final design for the website. The theme now is gray-scaled.
+                                The layout is created using grid-display to make it more adaptive towards responsive design.<br>
+                                The following log will show the journey of creating this page and my personal takes.</p>
+                             
+
+                             <h2 class = "headings"> Logs: </h2>
+                                <ol>
+                                    <li> <h3>May 12, 2021:</h3>
+                                        The basic webpage layout was created this day.
+                                         I decided to create this page with sci-fi feels.
+                                         Hence, I created some glowing neon effects on everything with Blue colored theme.
+                                         I used Box-Shadow property on CSS to create the glowing border on the Nav bar and Menu items.
+                                          This is the Day i Thought about The layout only and not the content at all.
+                                          <br><br><img src = "styles/Images/day1.jpg"><br><br> Later that day i decided to use some red to complement the Cyan and changed the text color to cyan. 
+                                         <br>Also due to bright background the "Glow" was getting undermined, so I decided to use Deep Blue for the background gradient instead.<br>
+                                         The hover effect was also added to the menu to make it brighter while hovered.
+                                         <br><br><br><img src = "styles/Images/day1_2.jpg">
+                                         <br>
+                                         However, The red neon text was not as good-looking as i had hoped it would be so I changed it back to blue.
+                                         <br><img src = "styles/Images/day1final.jpg">
+                                         </li>
+
+                                    <li>
+                                         <h3> May 13, 2021: </h3>
+                                        Contents For Home Page and Contact page was Made on this Day.<br><br>
+                                        I also decided to make change on the code design so that the redundancy of repeating the Box-shadow property was removed.
+                                        Instead of giving box-shadow property to every elements(nav bar, home page container etx),
+                                         I created a new class glowBorder and glowShadow with the properties.
+                                        A new 'Curr' class was added to the menu item of the current page.
+                                         The curr class was given a bouncing animation using @keyframes, and background color was made bright.
+                                         <br><br> The background was replaced by an image with a planet and moon.
+                                         <br><br> New animation "float" was created to make some contens feel like they're floating by moving their positions slowly and constantly.
+                                         <br><br> The form also had Red Glowing effect on active inputs as shown in figure.
+                                         <img src = "styles/Images/day2.jpg"> <img src = "styles/Images/day2contact.jpg">   
+                                    </li>
+                                    <li>
+                                        <h3>May 14, 2021: </h3>
+                                        Created Menu items into a list of hyperlinks.
+                                        <br><br>
+                                        Tried To create a Side bar for menu and Scrollable Div with 'Aside' Tag but failed.
+                                        <br><br>
+                                        Other small position and size changes on the contents of Contact webpage.
+                                        <br><br>
+                                        <img src = "styles/Images/day3.jpg">
+                                    </li>
+                                    <li>
+                                        <h3> May 16, 2021: </h3>
+                                        Started on CV-- Did the basic layout and added a placeholder image to be replaced by my own photo later. 
+                                        <br><br>
+                                        Started on Portfolio-- Added Some of my artwork for Images as placeholders for the actual web projects from upcoming terms.
+                                        <br><br>
+                                        <img src = "styles/Images/day5cv.jpg"><img src= "styles/Images/day5port.jpg">
+                                    </li>
+                                    <li>
+                                        <h3> May 18, 2021 </h3>
+                                        <strong> A HUGE DESIGN DECISION: Goodbye shiny borders and text.- </strong>
+                                        I changed my website theme to 'grey-scaled' from the 'glowing sci-fi'-theme.
+                                        <br><br>
+                                        Display: grid in website layout was implemented for better resposiveness. The webpage is divided into three mail parts:
+                                         <ul>
+                                            <li> The Header </li>
+                                            <li> Menu Bar/ Nav Bar</li>
+                                            <li> Content Container</li>
+                                        </ul>
+                                        The dream of sidebar menu still lives on!!
+                                        <br><br>
+                                        The change was made because I suddenly felt that I overdid with the design on the previous ones. It was also very difficult to manage, due to fixed box-shadow size the site looked hideous in mobile.
+                                        <br> Also, The "formal" contents like CV didn't fit the sci-fi environment I had created for the website.<br>
+                                        With the gird display everything fell on place. The code was very manageable, easy to debug and also very clean. There was no problem with the content. The website was mobile-friendly right away.
+                                        <br><br>
+                                        <img src = "styles/Images/day6home.jpg">
+                                        <img src = "styles/Images/day6contact.jpg">
+                                        <img src = "styles/Images/day6cv.jpg">
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+
+                             <h2 class = "headings"> Abstract </h2>
+
+
+                    </div>
             </div>
         </div>
     </body>

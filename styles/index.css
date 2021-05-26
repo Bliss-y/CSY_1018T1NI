@@ -9,6 +9,7 @@ body {
     background-color: rgb(20, 20, 20);
     margin: 0;
 }
+
 #hamCon input{
     display: none;
 }
@@ -19,7 +20,6 @@ body {
     grid-template-columns: auto 80%;
     max-width: 100%;
     column-gap: 5px;
-    row-gap: 5px;
 }
 
 header{
@@ -27,7 +27,7 @@ header{
     color:rgb(150, 150, 150);
     border-bottom: solid #333333;
     background-color: #222222;
-    height: 80px;
+    height: 10vh;
     text-align: center;
 }
 
@@ -35,7 +35,7 @@ header{
 
 #menu {
     list-style: none;
-    height: 80vh;
+    height: 90vh;
     /* top: 0;
     right: 0; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
@@ -67,7 +67,6 @@ header{
     margin: 0;
     display: block;
     width: 100%;
-    background-color: transparent;
     text-align: center;
     padding: 10px 0;
     border-style: solid;
@@ -368,8 +367,22 @@ header a{
 /* ////////////////////////////              Site Report                   / ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////           Site Report                    /////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* alligning the text to the right instead of center inheritence from main */
+.repCon{
+    text-align: left;
+}
 
+/* keeping the Report heading in middle */
+.repCon h1{
+    text-align: center;
+}
+.contents{
+    /* removing the general p tag's properties */
+    border: none;
+    transition-duration: 0s;
+}
 
+/*  */
 
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
