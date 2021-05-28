@@ -1,12 +1,10 @@
 /* this part is constant for all the pages since it the basic layout for the site */
-/* https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_cols */
 *{
     box-sizing: border-box;
 }
 
 body {
-    /* https://www.artstation.com/artwork/0Rw54 src 'EREN ARIK' */
-    background-color: rgb(20, 20, 20);
+    background-color: #141414;
     margin: 0;
 }
 
@@ -24,7 +22,7 @@ body {
 
 header{
     grid-area: 1/1/span 1/span 2;
-    color:rgb(150, 150, 150);
+    color:#969696;
     border-bottom: solid #333333;
     background-color: #222222;
     height: 10vh;
@@ -39,7 +37,7 @@ header{
     /* top: 0;
     right: 0; */
     /* will keep it at least a bit responsive until it's impossible and menus will be linear */
-    background-color: rgb(26, 26, 27);
+    background-color: #1a1a1b;
     padding: 0 5px;
 }
 
@@ -70,7 +68,7 @@ header{
     text-align: center;
     padding: 10px 0;
     border-style: solid;
-    border-color: rgb(112, 112, 112);
+    border-color: #707070;
 }
 
 #menu ul{
@@ -82,12 +80,12 @@ header{
 .menus:hover{
     /* small animation on hover */
     transition-duration: 0.5s;
-    background-color: rgb(46, 46, 46);
+    background-color: #2e2e2e;
 }
 
 a {
     margin-left: 20px;
-    color:rgb(175, 175, 175);
+    color:#afafaf;
 }
 
 /* creating a bounce animation for whenever needed : ) */
@@ -104,19 +102,9 @@ a {
 
 #curr {
     position: relative;
-    background-color: rgb(128, 128, 128);
+    background-color: #808080;
     animation-name: bounce;
     animation-duration: 1s;
-}
-
-
-.glowText{
-    /* making text glow as well */
-    text-shadow: 0 0 3px #fff,
-        0 0 5px #ffffff,
-        0 0 5px #00e6e6, 0 0 8px #00e6d3,
-        0 0 10px #00dee6, 0 0 14px #00cbe6,
-        0 0 18px #00d7e6;
 }
 
 @keyframes float {
@@ -131,9 +119,9 @@ a {
     padding: 20px;
     text-align: center;
     /* width: max-content; */
-    background-color: rgb(15, 15, 15);
+    background-color: #0f0f0f;
     animation-duration: 10s;
-    color:rgb(209, 214, 214);
+    color:#d1d6d6;
     height: 90vh;
     overflow-y: auto;
 }
@@ -163,7 +151,7 @@ p {
     /* width: max-content; */
     display: flex;
     flex-direction: column;
-    color: rgb(172, 172, 172);
+    color: #acacac;
     float: left;
     height: max-content;
     max-width: 100vw;
@@ -188,10 +176,10 @@ input[type = text]{
 
 input:focus, textarea:focus{
     background-color: #ffffff;
-    color:rgb(209, 214, 214);
+    color:#d1d6d6;
     outline: none;
     text-align: center;
-    box-shadow: 0 -2px 3px 2px rgb(138, 138, 138) inset;
+    box-shadow: 0 -2px 3px 2px #8a8a8a inset;
     background-color: #f3353500;
     transition-duration: 0.5s;
 }
@@ -241,21 +229,7 @@ button:hover{
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
-#portfolio{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-
-img{
-    /* https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/#:~:text=To%20auto%2Dresize%20an%20image%20or%20a%20video%20to%20fit,resize%20and%20fit%20the%20container. */
-    object-fit:scale-down;
-    height: 100%;
-    width: 100%;
-}
-
+/* ths is image container*/
 .grow{
     background-color: #044d6ea8;
     padding: 0;
@@ -266,21 +240,24 @@ img{
     float: left;
 }
 
+/* making the image fit inside the div instead of it's original size */
 .hover{
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
+/* show complete image on hover.(not the full size only full image) */
 .grow:hover{
-    z-index: 1;
     height: auto;
-    transform: scale(1);
-    box-shadow: 0px 0px 1px 2px rgb(255, 206, 206),
+    box-shadow: 0px 0px 1px 2px #ffcece,
         0px 0px 5px 3px  #ff0000,
         0 0 1px 1px #ffcece inset,
         0 0px 5px 3px #ff0000 inset;
     transition-duration: 0.5s;
 }
 
+/* heading of text container */
 .textPic{
     padding-top: 10px;
     margin-bottom: 5px;
@@ -318,21 +295,18 @@ img{
 
 #cvbody{
     display: flex;
+    list-style: none;
     flex-wrap: wrap;
     font-size: 20px;
     grid-template-columns: auto auto;
     width: 100%;
     background-color: #1b1b1b;
     color: #c3c2c2;
+    padding: 0;
 }
 
 .headers{
     Color: black;
-}
-
-#cvbody, ul{
-    padding: 0;
-    width: 100%;
 }
 
 .topics{
@@ -357,9 +331,7 @@ header a{
 }
 
 #links li{
-    list-style: circle inside none;
-    text-align: center;
-    align-self: center;
+    list-style: none;
 }
 
 /*//////////////////////////////////////     Site Report                /////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -376,19 +348,27 @@ header a{
 .repCon h1{
     text-align: center;
 }
-.contents{
-    /* removing the general p tag's properties */
-    border: none;
-    transition-duration: 0s;
+
+.repCon img{
+    max-width: 100%;
 }
 
-/*  */
+.repCon .contents{
+    /* removing the general p tag's properties */
+    border: none;
+}
+
+.repCon img{
+    width: 49%;
+    border: solid #b6b6b6;
+}
 
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media screen and ( max-width: 500px ){
+    /* changing the grid display */
     .layout{
         grid-template-columns: auto;
     }
@@ -405,9 +385,9 @@ header a{
     #main{
         grid-area: 3/1;
         max-width: 100%;
-        padding: 2px;
+        padding: 3px;
     } 
-
+    /* For hamburger removing menus initially */
     #drop{
         transform-origin: 0% 0%;
         display: none;
@@ -416,7 +396,7 @@ header a{
         background-color: #1b1b1b;
         
     }
-  
+    
     #hamburger{
         margin-bottom: 0;
         display:inline-block;
@@ -435,31 +415,31 @@ header a{
         margin-top: 5px;
         opacity: 0;
     }
-
+/* giving properties to siblings of checkbox ie menu and hamburger icon after it's checked */
     #hamCon input:checked ~ #drop{
         display: block;
         animation-name: slideDown;
-        animation-duration: 0.5s;
+        animation-duration: 0.2s;
     }
   
     #hamCon input:checked ~ #hamburger{
         border: solid #6a6a6b;
         transition-duration: 1s;
-        background-color: rgb(236, 236, 236);
+        background-color: #ececec;
     }
-    
+    /* animation for menu to drop down */
     @keyframes slideDown {
         from{transform: scale(0);}
         to{
             transform: scale(1);
         }
     }
-
-    .topics{
+/* making some elements bigger and conatin full width on mobile */
+    .topics, .fieldset, form, .repCon img{
         width: 100%;
     }
     .grow{
-        width: 100%;
+        width: 98%;
         height: auto;
     }
     .grow:hover{
@@ -474,7 +454,6 @@ header a{
         font-size: 20px;
     }
 
-
     .cvhead{
         border-left: none;
         border-right: none;
@@ -484,13 +463,10 @@ header a{
         margin: 0;
         width: 100%;
     }
+
     input[type = text]{
         font-size: 5vw;
     }
-    form{
-        width: 100%;
-    }
-    .fieldset{
-        width: 100%;
-    }
+
+
 }
