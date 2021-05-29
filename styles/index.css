@@ -115,7 +115,7 @@ a {
     100% { right:0; top: 0; }
 }
 
-#main {
+main {
     padding: 20px;
     text-align: center;
     /* width: max-content; */
@@ -382,7 +382,7 @@ header a{
         height: initial;
     }
     
-    #main{
+    main{
         grid-area: 3/1;
         max-width: 100%;
         padding: 3px;
