@@ -1,226 +1,288 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8">
-        <link rel = "stylesheet" type="text/css" href= "styles/index.css">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel = "stylesheet" type="text/css" href= "styles/index.css">
-        <title>
-                Welcome!
-        </title>
-    </head>
-    <body>
-        <div class = "layout">
-            <header> Nishedh's Portfolio </header>
-            <nav id = "menu">
-                <!-- hamburger:: https://codepen.io/bradtraversy/pen/vMGBjQ -->
-                <div id = "hamCon">
-                    <input type = "checkbox">
-                    <div id = "hamburger">
-                        <div class = "lines"> </div>
-                        <div class = "lines"> </div>
-                        <div class = "lines"> </div>
-                    </div>
-                   
-                    <ul id = "drop">
-                        <li><a href = "index.html" class = "menus"> Home </a></li>
-                        <li><a href = "portfolio.html" class = "menus"> Portfolio </a></li>
-                        <li><a href = "cv.html" class = "menus"> CV </a></li>
-                        <li><a href = "contact.html" class = "menus"> Contacts </a></li>
-                        <li><a href = "sitereport.html" class = "menus" id = "curr"> Site report </a></li>
-                    </ul>
-                </div>
-            </nav>
-            <main>
-                    <div class = "repCon">
-                        <h1> Site Report </h1>
-                        <h2 class = "headings"> Abstract </h2>
-                        <p class = "contents"> 
-                        I am Nishedh Karki, a student of Northampton University.
-                        This website is my submission for the College Assessment Assignment given By the Northampton University.
-                        The goal was to create a responsive website to show my portfolio and CV.
-                             There are 5 pages: </p>
-                             <ol>
-                                 <li><a href="index.html"> Home </a></li>
-                                 <li><a href="portfolio.html"> Portfolio </a></li>
-                                 <li><a href="contact.html"> Contact </a></li>
-                                 <li><a href="cv.html"> CV </a></li>
-                                 <li><a href="#"> Site Report (This Page) </a></li>
-                             </ol>
-                            <p class = "contents">
-                                This is the final report of the website with all details of it's creation as well as my personal logs.
-                                The report shows not only the development of the website but also my personal growth as a developer.
-                                It includes different challenges and obstacles encountered during the development of the website.
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles/index.css" />
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+		<link rel="stylesheet" type="text/css" href="styles/index.css" />
+		<title>Welcome!</title>
+	</head>
+	<body>
+		<div class="layout">
+			<header>Nishedh's Portfolio</header>
+			<nav id="menu">
+				<!-- hamburger:: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+				<div id="hamCon">
+					<input type="checkbox" />
+					<div id="hamburger">
+						<div class="lines"></div>
+						<div class="lines"></div>
+						<div class="lines"></div>
+					</div>
 
-                        </p>
-                            <h2 class = "headings"> Objectives </h2>
-                            <p class = "contents">
-                                </p>
-                            <ol>
-                                <li> To Test My HTML and CSS skills. </li>
-                                <li> To Create a functional and well-designed website. </li>
-                                <li> To get knowledge about fundamentals of building websites. </li>
-                                <li> To get knowledge about the webpages and how they work. </li>
-                                <li> To learn Git and make optimal use of it's function. </li>
-                            </ol>
-                        <h2 class = "headings"> Module: CSY1018 WEB 1 </h2>
-                        <p class = "contents">
-                            My journey in the module 'WEB1' has been very exciting.
-                            In the beginning, I was not really sold by the career of web development as I was interested more in Software Engineering.
-                            This module, however, made me realize the beauty of web development and rethink my plan.
-                                "Just HTML and CSS is too less", I used to think but as the module progressed I realised how much I had yet to learn.
-                                Learning github was another great experience for me. I can now confidently say that i've grown a lot.
-                                I look forward to the next term.
-                        </p>
-                            <h2 class = "headings"> Creating the Website </h2>
-                            <p class = "contents">
-                            When I got the assignment, in May 12, I was very nervous and doubtful in my abilities as a developer.
-                                But as I started building the website I definitely beccame more confident in myself. <br>
-                                <br>
-                            The first thing I was thinking about while creating the website was the layout and theme.
-                                It was very difficult to come up with a good design so I decided to just start the basic menu and go with whatever came. 
-                            Needless to say, I had an idea to create a sci-fi themed website. Hence, I started to research and saw some sfi-fi works like "star wars" and "rick and morty" to get a grasp of the mood and colors for the website.
-                            Hence, I created some glowing neon effects on everything with Blue colored theme. 
-                            I used Box-Shadow property on CSS to create the glowing border on the Nav bar and Menu items. 
-                            I planned out the layout but not the content at all. 
-                            Later that day i decided to use some red to complement the Cyan and changed the text color to cyan.
-                            Also due to bright background the "Glow" was getting undermined, so I decided to use Deep Blue for the background gradient instead.
-                            The hover effect was also added to the menu to make it brighter while hovered. 
-                            Then an idea of creating the big sections of the pages to float around as if they're in space popped in my head. 
-                            I worked on the animation using @keyframes.
-                            I also decided to make change on the code design so that the redundancy of repeating the Box-shadow property was removed. 
-                            Instead of giving box-shadow property to every elements(nav bar, home page container etc), I created a new class glowBorder and glowShadow with the properties. 
-                            A new 'Curr' class was also added to the menu item of the current page. 
-                            The curr class was given a bouncing animation using @keyframes, and background color was made bright.<br><br>
-                            Although the initial theme for the website was sci-fi, half way through the development i Issued a major change to it by taking it to a whole different direction which is the final design for the website.
-                            The theme now is gray-scaled.
-                            The change was made because I suddenly felt that I overdid with the design on the previous ones. 
-                            It was also very difficult to manage, due to fixed box-shadow size the site looked hideous in mobile.
-                            Also, The "formal" contents like CV didn't fit the sci-fi environment I had created for the website.
-                            With the gird display everything fell on place. 
-                            The code was very manageable, easy to debug and also very clean. There was no problem with the content. 
-                            The website was mobile-friendly right away.<br><br> 
-                            At the very end of the project I found out about the main tag to enclose all my contents inside. It was definitely a surprise to findout about it from freeCodeCamp when i was practising some more web developing.
-                            I decided to go with grey-scaled as it is a modern term. All the websites these days have dark mode. So I went with something along that line. 
-                            <a href="https://discord.com/">Discord app</a> was the website I was inspired by.
-                            The layout is created using grid-display to make it more adaptive towards responsive design.<br><br>
-                            I definitely learned a lot during this project aside from just html and css but also about design.
-                            The following log will show the journey of creating this page and my personal takes.
-                            
-                        </p>
-                            
+					<ul id="drop">
+						<li><a href="index.html" class="menus"> Home </a></li>
+						<li><a href="portfolio.html" class="menus"> Portfolio </a></li>
+						<li><a href="cv.html" class="menus"> CV </a></li>
+						<li><a href="contact.html" class="menus"> Contacts </a></li>
+						<li>
+							<a href="sitereport.html" class="menus" id="curr">
+								Site report
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main>
+				<div class="repCon">
+					<h1>Site Report</h1>
+					<h2 class="headings">Abstract</h2>
+					<p class="contents">
+						I am Nishedh Karki, a student of Northampton University. This
+						website is my submission for the College Assessment Assignment given
+						By the Northampton University. The goal was to create a responsive
+						website to show my portfolio and CV. There are 5 pages:
+					</p>
+					<ol>
+						<li><a href="index.html"> Home </a></li>
+						<li><a href="portfolio.html"> Portfolio </a></li>
+						<li><a href="contact.html"> Contact </a></li>
+						<li><a href="cv.html"> CV </a></li>
+						<li><a href="#"> Site Report (This Page) </a></li>
+					</ol>
+					<p class="contents">
+						This is the final report of the website with all details of it's
+						creation as well as my personal logs. The report shows not only the
+						development of the website but also my personal growth as a
+						developer. It includes different challenges and obstacles
+						encountered during the development of the website.
+					</p>
+					<h2 class="headings">Objectives</h2>
+					<p class="contents"></p>
+					<ol>
+						<li>To Test My HTML and CSS skills.</li>
+						<li>To Create a functional and well-designed website.</li>
+						<li>To get knowledge about fundamentals of building websites.</li>
+						<li>To get knowledge about the webpages and how they work.</li>
+						<li>To learn Git and make optimal use of it's function.</li>
+					</ol>
+					<h2 class="headings">Module: CSY1018 WEB 1</h2>
+					<p class="contents">
+						My journey in the module 'WEB1' has been very exciting. In the
+						beginning, I was not really sold by the career of web development as
+						I was interested more in Software Engineering. This module, however,
+						made me realize the beauty of web development and rethink my plan.
+						"Just HTML and CSS is too less", I used to think but as the module
+						progressed I realised how much I had yet to learn. Learning github
+						was another great experience for me. I can now confidently say that
+						i've grown a lot. I look forward to the next term.
+					</p>
+					<h2 class="headings">Creating the Website</h2>
+					<p class="contents">
+						When I got the assignment, in May 12, I was very nervous and
+						doubtful in my abilities as a developer. But as I started building
+						the website I definitely beccame more confident in myself. <br />
+						<br />
+						The first thing I was thinking about while creating the website was
+						the layout and theme. It was very difficult to come up with a good
+						design so I decided to just start the basic menu and go with
+						whatever came. Needless to say, I had an idea to create a sci-fi
+						themed website. Hence, I started to research and saw some sfi-fi
+						works like "star wars" and "rick and morty" to get a grasp of the
+						mood and colors for the website. Hence, I created some glowing neon
+						effects on everything with Blue colored theme. I used Box-Shadow
+						property on CSS to create the glowing border on the Nav bar and Menu
+						items. I planned out the layout but not the content at all. Later
+						that day i decided to use some red to complement the Cyan and
+						changed the text color to cyan. Also due to bright background the
+						"Glow" was getting undermined, so I decided to use Deep Blue for the
+						background gradient instead. The hover effect was also added to the
+						menu to make it brighter while hovered. Then an idea of creating the
+						big sections of the pages to float around as if they're in space
+						popped in my head. I worked on the animation using @keyframes. I
+						also decided to make change on the code design so that the
+						redundancy of repeating the Box-shadow property was removed. Instead
+						of giving box-shadow property to every elements(nav bar, home page
+						container etc), I created a new class glowBorder and glowShadow with
+						the properties. A new 'Curr' class was also added to the menu item
+						of the current page. The curr class was given a bouncing animation
+						using @keyframes, and background color was made bright.<br /><br />
+						Although the initial theme for the website was sci-fi, half way
+						through the development i Issued a major change to it by taking it
+						to a whole different direction which is the final design for the
+						website. The theme now is gray-scaled. The change was made because I
+						suddenly felt that I overdid with the design on the previous ones.
+						It was also very difficult to manage, due to fixed box-shadow size
+						the site looked hideous in mobile. Also, The "formal" contents like
+						CV didn't fit the sci-fi environment I had created for the website.
+						With the gird display everything fell on place. The code was very
+						manageable, easy to debug and also very clean. There was no problem
+						with the content. The website was mobile-friendly right away.<br /><br />
+						At the very end of the project I found out about the main tag to
+						enclose all my contents inside. It was definitely a surprise to
+						findout about it from freeCodeCamp when i was practising some more
+						web developing. I decided to go with grey-scaled as it is a modern
+						term. All the websites these days have dark mode. So I went with
+						something along that line.
+						<a href="https://discord.com/">Discord app</a> was the website I was
+						inspired by. The layout is created using grid-display to make it
+						more adaptive towards responsive design.<br /><br />
+						I definitely learned a lot during this project aside from just html
+						and css but also about design. The following log will show the
+						journey of creating this page and my personal takes.
+					</p>
 
-                            <h2 class = "headings"> Logs: </h2>
-                        <ol>
-                            <li> <h3>May 12, 2021:</h3>
-                                The basic webpage layout was created this day.<br><br>
-                                Created the Nav bar and menu items.
-                                <br><br> switched between different iterations of background colors and text colors.
-                                    <br><br><img src = "styles/Images/day1.jpg" alt="webpage preview">
-                                    <img src = "styles/Images/day1_2.jpg" alt="webpage preview">
-                                    <img src = "styles/Images/day1final.jpg" alt="webpage preview">
-                                    <br>
-                                    </li>
+					<h2 class="headings">Logs:</h2>
+					<ol>
+						<li>
+							<h3>May 12, 2021:</h3>
+							The basic webpage layout was created this day.<br /><br />
+							Created the Nav bar and menu items.
+							<br /><br />
+							switched between different iterations of background colors and
+							text colors. <br /><br /><img
+								src="styles/Images/day1.jpg"
+								alt="webpage preview"
+							/>
+							<img src="styles/Images/day1_2.jpg" alt="webpage preview" />
+							<img src="styles/Images/day1final.jpg" alt="webpage preview" />
+							<br />
+						</li>
 
-                            <li>
-                                    <h3> May 13, 2021: </h3>
-                                Contents For Home Page and Contact page was Made on this Day.<br><br>
-                                Created a new class glowBorder and glowShadow with the properties.<br><br>
-                                Gave the menu item of current page an animation of bounce.<br><br>
-                                    <br><br> The background was replaced by an image with a planet and moon.
-                                    <br><br> New animation "float" was created to make some contens feel like they're floating by moving their positions slowly and constantly.
-                                    <br><br> The form also had Red Glowing effect on active inputs as shown in figure.<br><br>
-                                    <img src = "styles/Images/day2.jpg" alt="webpage preview"><img src = "styles/Images/day2contact.jpg" alt="webpage preview">   
-                            </li>
-                            <li>
-                                <h3>May 14, 2021: </h3>
-                                Created Menu items into a list of hyperlinks.
-                                <br><br>
-                                Tried To create a Side bar for menu and Scrollable Div with 'Aside' Tag but failed.
-                                <br><br>
-                                Other small position and size changes on the contents of Contact webpage.
-                                <br><br>
-                                <img src = "styles/Images/day3.jpg" alt="webpage preview">
-                            </li>
-                            <li>
-                                <h3> May 16, 2021: </h3>
-                                Started on CV-- Did the basic layout and added a placeholder image to be replaced by my own photo later. 
-                                <br><br>
-                                Started on Portfolio-- Added Some of my artwork for Images as placeholders for the actual web projects from upcoming terms.
-                                <br><br>
-                                <img src = "styles/Images/day5cv.jpg" alt="webpage preview"><img src= "styles/Images/day5port.jpg" alt="webpage preview">
-                            </li>
-                            <li>
-                                <h3> May 18, 2021 </h3>
-                                <strong> A HUGE DESIGN DECISION: Goodbye shiny borders and text.- </strong>
-                                I changed my website theme to 'grey-scaled' from the 'glowing sci-fi'-theme.
-                                <br><br>
-                                Display: grid in website layout was implemented for better resposiveness. The webpage is divided into three mail parts:
-                                    <ul>
-                                    <li> The Header </li>
-                                    <li> Menu Bar/ Nav Bar</li>
-                                    <li> Content Container</li>
-                                </ul>
-                                The dream of sidebar menu still lives on!!
-                                <br><br>
-                                <img src = "styles/Images/day6home.jpg" alt="webpage preview">
-                                <img src = "styles/Images/day6contact.jpg" alt="webpage preview">
-                                <img src = "styles/Images/day6cv.jpg" alt="webpage preview">
-                            </li>
-                            <li>
-                                <h3> May 19, 2021 </h3>
-                                Branched out to work on hamburger menu. Created "hamburger" branch on github.<br><br>
-                                Started on the hamburger item in 'hamburger' branch.<br><br>
-                                Small Placeholder for hamburger was created. 
-                                Tried to use the checkbox method to create functioning hamburger menu.<br><br>
-                                Used the Mailto: action in form attribute.<br><br>
-                                Added media querry for mobile view and started to change the layout.<br><br>
-                                <img src="styles/Images/day7ham.jpg" alt="hamburger preview">
-
-                            </li>
-                            <li>
-                                <h3> May 20, 2021 </h3>
-                                Added some contents inside the pages. No big changes this day.<br><br>
-                                Hosted the page on github to check cross-platforms easily.
-                            </li>
-                            <li>
-                                    <h3> May 21, 2021 </h3>
-                                    Created functional hamburger menu with checkbox method.
-                                    Toggled between display:none and block to turn menu on and off.<br><br>
-
-                            </li>
-                            <li>
-                                <h3> May 22, 2021 </h3>
-                                Completed Hamburger menu altogether.<br><br>
-                                Merged "hamburger" and "main", Fixed the merge conflicts as well.<br><br>
-                                <img src = "styles/Images/hamcomp.JPG" alt="hamburger preview">
-                            </li>
-                            <li>
-                                <h3> May 23, 2021 </h3>
-                                Set some of the texts' size with vw units instead of fixed pixel to make them more responsive. This fixed the overflow issues in my website.<br><br>
-                                At this point the website was basically completed.<br><br>
-                                The "main" div made Scrollable so the menu doesn't disappear with page scroll without using position properties.
-                            </li>
-                            <li>
-                                <h3> May 29, 2021</h3>
-                                Discovered 'main' tag and used it correctly. Instead of using div with id main.
-                            </li>
-                        </ol>
-                        <h2> Validator images </h2>
-                        <img src = "styles/Images/valind.JPG" alt = "valid index.html">
-                        <img src = "styles/Images/valport.JPG" alt = "valid portfolio.html">
-                        <img src = "styles/Images/validcon.JPG" alt = "valid contact.html">
-                        <img src = "styles/Images/valcv.JPG" alt = "valid cv.html">
-                        <img src = "styles/Images/valsite.JPG" alt = "valid sitereport.html">
-                        <img src = "styles/Images/validcss.JPG" alt = "valid index.css">
-                        <h2 class = "headings"> References: </h2>
-                            <ul> 
-                            <li>https://www.youtube.com/watch?v=DZg6UfS5zYg, (2019). Pure CSS Hamburger Menu & Overlay - YouTube. [Online] Available at: https://www.youtube.com/watch?v=DZg6UfS5zYg [Accessed 19 May.2021].</li>
-                            <li>https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/introduction-to-html5-elements.<br> Learn Basic HTML and HTML5: Introduction to HTML5 Elements | freeCodeCamp.org.<br>[online] Available at: https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/introduction-to-html5-elements[Accessed: 29 May, 2021].</li>
-                                                    
-                        </ul>
-                    </div>
-                </main>
-        </div>
-    </body>
+						<li>
+							<h3>May 13, 2021:</h3>
+							Contents For Home Page and Contact page was Made on this Day.<br /><br />
+							Created a new class glowBorder and glowShadow with the
+							properties.<br /><br />
+							Gave the menu item of current page an animation of bounce.<br /><br />
+							<br /><br />
+							The background was replaced by an image with a planet and moon.
+							<br /><br />
+							New animation "float" was created to make some contens feel like
+							they're floating by moving their positions slowly and constantly.
+							<br /><br />
+							The form also had Red Glowing effect on active inputs as shown in
+							figure.<br /><br />
+							<img src="styles/Images/day2.jpg" alt="webpage preview" /><img
+								src="styles/Images/day2contact.jpg"
+								alt="webpage preview"
+							/>
+						</li>
+						<li>
+							<h3>May 14, 2021:</h3>
+							Created Menu items into a list of hyperlinks.
+							<br /><br />
+							Tried To create a Side bar for menu and Scrollable Div with
+							'Aside' Tag but failed.
+							<br /><br />
+							Other small position and size changes on the contents of Contact
+							webpage.
+							<br /><br />
+							<img src="styles/Images/day3.jpg" alt="webpage preview" />
+						</li>
+						<li>
+							<h3>May 16, 2021:</h3>
+							Started on CV-- Did the basic layout and added a placeholder image
+							to be replaced by my own photo later.
+							<br /><br />
+							Started on Portfolio-- Added Some of my artwork for Images as
+							placeholders for the actual web projects from upcoming terms.
+							<br /><br />
+							<img src="styles/Images/day5cv.jpg" alt="webpage preview" /><img
+								src="styles/Images/day5port.jpg"
+								alt="webpage preview"
+							/>
+						</li>
+						<li>
+							<h3>May 18, 2021</h3>
+							<strong>
+								A HUGE DESIGN DECISION: Goodbye shiny borders and text.-
+							</strong>
+							I changed my website theme to 'grey-scaled' from the 'glowing
+							sci-fi'-theme.
+							<br /><br />
+							Display: grid in website layout was implemented for better
+							resposiveness. The webpage is divided into three mail parts:
+							<ul>
+								<li>The Header</li>
+								<li>Menu Bar/ Nav Bar</li>
+								<li>Content Container</li>
+							</ul>
+							The dream of sidebar menu still lives on!!
+							<br /><br />
+							<img src="styles/Images/day6home.jpg" alt="webpage preview" />
+							<img src="styles/Images/day6contact.jpg" alt="webpage preview" />
+							<img src="styles/Images/day6cv.jpg" alt="webpage preview" />
+						</li>
+						<li>
+							<h3>May 19, 2021</h3>
+							Branched out to work on hamburger menu. Created "hamburger" branch
+							on github.<br /><br />
+							Started on the hamburger item in 'hamburger' branch.<br /><br />
+							Small Placeholder for hamburger was created. Tried to use the
+							checkbox method to create functioning hamburger menu.<br /><br />
+							Used the Mailto: action in form attribute.<br /><br />
+							Added media querry for mobile view and started to change the
+							layout.<br /><br />
+							<img src="styles/Images/day7ham.jpg" alt="hamburger preview" />
+						</li>
+						<li>
+							<h3>May 20, 2021</h3>
+							Added some contents inside the pages. No big changes this day.<br /><br />
+							Hosted the page on github to check cross-platforms easily.
+						</li>
+						<li>
+							<h3>May 21, 2021</h3>
+							Created functional hamburger menu with checkbox method. Toggled
+							between display:none and block to turn menu on and off.<br /><br />
+						</li>
+						<li>
+							<h3>May 22, 2021</h3>
+							Completed Hamburger menu altogether.<br /><br />
+							Merged "hamburger" and "main", Fixed the merge conflicts as
+							well.<br /><br />
+							<img src="styles/Images/hamcomp.JPG" alt="hamburger preview" />
+						</li>
+						<li>
+							<h3>May 23, 2021</h3>
+							Set some of the texts' size with vw units instead of fixed pixel
+							to make them more responsive. This fixed the overflow issues in my
+							website.<br /><br />
+							At this point the website was basically completed.<br /><br />
+							The "main" div made Scrollable so the menu doesn't disappear with
+							page scroll without using position properties.
+						</li>
+						<li>
+							<h3>May 29, 2021</h3>
+							Discovered 'main' tag and used it correctly. Instead of using div
+							with id main.
+						</li>
+					</ol>
+					<h2>Validator images</h2>
+					<img src="styles/Images/valind.JPG" alt="valid index.html" />
+					<img src="styles/Images/valport.JPG" alt="valid portfolio.html" />
+					<img src="styles/Images/validcon.JPG" alt="valid contact.html" />
+					<img src="styles/Images/valcv.JPG" alt="valid cv.html" />
+					<img src="styles/Images/valsite.JPG" alt="valid sitereport.html" />
+					<img src="styles/Images/validcss.JPG" alt="valid index.css" />
+					<h2 class="headings">References:</h2>
+					<ul>
+						<li>
+							https://www.youtube.com/watch?v=DZg6UfS5zYg, (2019). Pure CSS
+							Hamburger Menu & Overlay - YouTube. [Online] Available at:
+							https://www.youtube.com/watch?v=DZg6UfS5zYg [Accessed 19
+							May.2021].
+						</li>
+						<li>
+							https://www.freecodecamp.org/ learn/responsive-web-design/. Learn
+							Basic HTML and HTML5: Introduction to HTML5 Elements |
+							freeCodeCamp.org.<br />[online] Available at:
+							https://www.freecodecamp.org/learn/
+							responsive-web-design.[Accessed: 29 May, 2021].
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+	</body>
 </html>

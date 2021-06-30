@@ -1,337 +1,356 @@
 /* this part is constant for all the pages since it the basic layout for the site */
-*{
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #141414;
-    margin: 0;
+	background-color: #141414;
+	margin: 0;
 }
 
-#hamCon input{
-    display: none;
+#hamCon input {
+	display: none;
 }
 
 /* Grid layout */
-.layout{
-    display: grid;
-    grid-template-columns: auto 80%;
-    max-width: 100%;
-    column-gap: 5px;
+.layout {
+	display: grid;
+	grid-template-columns: auto 80%;
+	max-width: 100%;
+	column-gap: 5px;
 }
 
-header{
-    grid-area: 1/1/span 1/span 2;
-    color:#969696;
-    border-bottom: solid #333333;
-    background-color: #222222;
-    height: 10vh;
-    text-align: center;
+header {
+	grid-area: 1/1 / span 1 / span 2;
+	color: #969696;
+	border-bottom: solid #333333;
+	background-color: #222222;
+	height: 10vh;
+	font-size: 30px;
+	text-align: center;
 }
 
 /* menu is the container of menus */
 
 #menu {
-    list-style: none;
-    height: 90vh;
-    /* top: 0;
+	list-style: none;
+	height: 90vh;
+	/* top: 0;
     right: 0; */
-    /* will keep it at least a bit responsive until it's impossible and menus will be linear */
-    background-color: #1a1a1b;
-    padding: 0 5px;
+	/* will keep it at least a bit responsive until it's impossible and menus will be linear */
+	background-color: #1a1a1b;
+	padding: 0 5px;
 }
 
 /* hamburger section */
-#hamburger{
-    width: 30px;
-    height: 30px;
-    display: none;
-    padding-top: 3px;
+#hamburger {
+	width: 30px;
+	height: 30px;
+	display: none;
+	padding-top: 3px;
 }
-.lines{
-    width: 25px;
-    margin: 3px;
-    height: 4px;
-    background-color: white;
+.lines {
+	width: 25px;
+	margin: 3px;
+	height: 4px;
+	background-color: white;
 }
 
 /* contains the individual menus */
-#menu li{
-    width: 100%;
+#menu li {
+	width: 100%;
 }
 
 .menus {
-    /* required for the animation */
-    margin: 0;
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    border-style: solid;
-    border-color: #707070;
+	/* required for the animation */
+	margin: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	border-style: solid;
+	border-color: #707070;
 }
 
-#menu ul{
-    list-style: none;
-    padding: 0;
-    width: 100%;
+#menu ul {
+	list-style: none;
+	padding: 0;
+	width: 100%;
 }
 
-.menus:hover{
-    /* small animation on hover */
-    transition-duration: 0.5s;
-    background-color: #2e2e2e;
+.menus:hover {
+	/* small animation on hover */
+	transition-duration: 0.5s;
+	background-color: #2e2e2e;
 }
 
 a {
-    margin-left: 20px;
-    color:#afafaf;
+	margin-left: 20px;
+	color: #afafaf;
 }
 
 /* creating a bounce animation for whenever needed : ) */
 @keyframes bounce {
-    0%{top:0;}
-    25%{top: -10px;}
-    50%{top : 0;}
-    75%{top : -5px;}
-    100%{top : 0;}
+	0% {
+		top: 0;
+	}
+	25% {
+		top: -10px;
+	}
+	50% {
+		top: 0;
+	}
+	75% {
+		top: -5px;
+	}
+	100% {
+		top: 0;
+	}
 }
-
 
 /* to display the page that we're in through menu and added bounce on it */
 
 #curr {
-    position: relative;
-    background-color: #808080;
-    animation-name: bounce;
-    animation-duration: 1s;
+	position: relative;
+	background-color: #808080;
+	animation-name: bounce;
+	animation-duration: 1s;
 }
 
 @keyframes float {
-    0%{ right:0; top: 0;}
-    20%{ right: 2vw; }
-    40%{ right: 2vw; top: 2vw;}
-    60%{ right: -2vw; top: 0.5vw; }
-    100% { right:0; top: 0; }
+	0% {
+		right: 0;
+		top: 0;
+	}
+	20% {
+		right: 2vw;
+	}
+	40% {
+		right: 2vw;
+		top: 2vw;
+	}
+	60% {
+		right: -2vw;
+		top: 0.5vw;
+	}
+	100% {
+		right: 0;
+		top: 0;
+	}
 }
 
 main {
-    padding: 20px;
-    text-align: center;
-    /* width: max-content; */
-    background-color: #0f0f0f;
-    animation-duration: 10s;
-    color:#d1d6d6;
-    height: 90vh;
-    overflow-y: auto;
+	padding: 20px;
+	text-align: center;
+	/* width: max-content; */
+	background-color: #0f0f0f;
+	animation-duration: 10s;
+	color: #d1d6d6;
+	height: 90vh;
+	overflow-y: auto;
 }
 
 /*/////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*///////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*////////////////////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
 /*/////////////////////// index.html and maybe others as well if i decide to use main //////////////////////////////////////*/
-.floaters{
-    font-size: 14vw;
-    animation-name: float;
-    position: relative;
-    animation-duration: 10s;
-    animation-delay: 2s;
+.floaters {
+	font-size: 14vw;
+	animation-name: float;
+	position: relative;
+	animation-duration: 10s;
+	animation-delay: 2s;
 }
 
 p {
-    transition-duration:2s;
+	transition-duration: 2s;
 }
 
 /* ///////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* ////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* ///////////////////////////////////////////////Contact.html///////////////////////////////////////////////////////////////////////////////////////////  */
 /* designing the overall form */
-.fieldset{
-        /* aligning all the text and inputs so it looks good ") */
-    /* width: max-content; */
-    display: flex;
-    flex-direction: column;
-    color: #acacac;
-    float: left;
-    height: max-content;
-    max-width: 100vw;
+.fieldset {
+	/* aligning all the text and inputs so it looks good ") */
+	/* width: max-content; */
+	display: flex;
+	flex-direction: column;
+	color: #acacac;
+	float: left;
+	height: max-content;
+	max-width: 100vw;
 }
 
-
-input[type = text]{
-    /* aligning the inputs with text */
-    align-self: center;
-    margin: 5px;
-    height: 50px;
-    color: inherit;
-    color: #ffffff;
-    padding: 0;
-    font-size: 30px;
-    max-width: 100vw;
-    background-color: #92929200;
-    border: none;
-    border-bottom: #808080b6 solid;
-    border-bottom-width: 1px;
+input[type="text"] {
+	/* aligning the inputs with text */
+	align-self: center;
+	margin: 5px;
+	height: 50px;
+	color: inherit;
+	color: #ffffff;
+	padding: 0;
+	font-size: 30px;
+	max-width: 100vw;
+	background-color: #92929200;
+	border: none;
+	border-bottom: #808080b6 solid;
+	border-bottom-width: 1px;
 }
 
-input:focus, textarea:focus{
-    background-color: #ffffff;
-    color:#d1d6d6;
-    outline: none;
-    text-align: center;
-    box-shadow: 0 -2px 3px 2px #8a8a8a inset;
-    background-color: #f3353500;
-    transition-duration: 0.5s;
+input:focus,
+textarea:focus {
+	background-color: #ffffff;
+	color: #d1d6d6;
+	outline: none;
+	text-align: center;
+	box-shadow: 0 -2px 3px 2px #8a8a8a inset;
+	background-color: #f3353500;
+	transition-duration: 0.5s;
 }
 
-textarea{
-    color: inherit;
-    margin-left: 10px;
-    text-align: center;
-    margin: 5px;
-    background-color: #4444447e;
-    font-size: 20px;
-    height: max-content;
-    width: 80%;
-    resize: vertical;
-    min-height: 30px;
+textarea {
+	color: inherit;
+	margin-left: 10px;
+	text-align: center;
+	margin: 5px;
+	background-color: #4444447e;
+	font-size: 20px;
+	height: max-content;
+	width: 80%;
+	resize: vertical;
+	min-height: 30px;
 }
 
-button{
-    margin-top: 3px;
-    align-self: center;
-    background-color: #626262;
-    border: none;
-    width: 40%;
-    height: 40px;
-    position: relative;
+button {
+	margin-top: 3px;
+	align-self: center;
+	background-color: #626262;
+	border: none;
+	width: 40%;
+	height: 40px;
+	position: relative;
 }
 
-button:hover{
-    transform: translate(0, -4px);
-    background-color: #818181;
-    border-style: solid;
-    border-color: white;
-    box-shadow: 0 2px 3px 0px #080808,
-         0 5px 0 0 #131313,
-        0 5px 0 1px #3b3b3b,
-        0 5px 0 2px #090b29;
-    transition-duration: 1s;
+button:hover {
+	transform: translate(0, -4px);
+	background-color: #818181;
+	border-style: solid;
+	border-color: white;
+	box-shadow: 0 2px 3px 0px #080808, 0 5px 0 0 #131313, 0 5px 0 1px #3b3b3b,
+		0 5px 0 2px #090b29;
+	transition-duration: 1s;
 }
 
-#textBox{
-    padding: 20px;
-    position: relative;
-    color: white;
-    text-align: center;
-    width: 100%;
+#textBox {
+	padding: 20px;
+	position: relative;
+	color: white;
+	text-align: center;
+	width: 100%;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////only portfolio  ///////////////////////////////////////////////////*/
 /* ths is image container*/
-.grow{
-    background-color: #044d6ea8;
-    padding: 0;
-    height: 300px;
-    width: 45%;
-    margin-bottom: 30px;
-    margin: 2%;
-    float: left;
+.grow {
+	background-color: #044d6ea8;
+	padding: 0;
+	height: 300px;
+	width: 45%;
+	margin-bottom: 30px;
+	margin: 2%;
+	float: left;
 }
 
 /* making the image fit inside the div instead of it's original size */
-.hover{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+.hover {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 /* show complete image on hover.(not the full size only full image) */
-.grow:hover{
-    height: auto;
-    box-shadow: 0px 0px 1px 2px #ffcece,
-        0px 0px 5px 3px  #ff0000,
-        0 0 1px 1px #ffcece inset,
-        0 0px 5px 3px #ff0000 inset;
-    transition-duration: 0.5s;
+.grow:hover {
+	height: auto;
+	box-shadow: 0px 0px 1px 2px #ffcece, 0px 0px 5px 3px #ff0000,
+		0 0 1px 1px #ffcece inset, 0 0px 5px 3px #ff0000 inset;
+	transition-duration: 0.5s;
 }
 
 /* heading of text container */
-.textPic{
-    padding-top: 10px;
-    margin-bottom: 5px;
-    width: 100%;
-    resize: vertical;
-    text-align: center;
-    font-size: 40px;
+.textPic {
+	padding-top: 10px;
+	margin-bottom: 5px;
+	width: 100%;
+	resize: vertical;
+	text-align: center;
+	font-size: 40px;
 }
-
 
 /*//////////////////////////////////////     CV section                /////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ////////////////////////////////       CV section            /////////////////////////////////////////////////////////////*/
 /* ////////////////////////////              CV section                 / ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////             CV section                   /////////////////////////////////////////////////////////////////////////////////////////////////*/
-#official_image{
-    width: 180px;
-    height: 200px;
+#official_image {
+	width: 180px;
+	height: 200px;
 }
 
-.cvhead{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #242424;
-    padding-bottom: 0;
-    padding-top: 5px;
-    border: solid #8a8a8a;
+.cvhead {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	background-color: #242424;
+	padding-bottom: 0;
+	padding-top: 5px;
+	border: solid #8a8a8a;
 }
 
-.cvhead h1{
-    font-size: 50px;
-    text-decoration: underline;
-    text-decoration-color:#969696;
+.cvhead h1 {
+	font-size: 50px;
+	text-decoration: underline;
+	text-decoration-color: #969696;
 }
 
-#cvbody{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    font-size: 20px;
-    grid-template-columns: auto auto;
-    width: 100%;
-    background-color: #1b1b1b;
-    color: #c3c2c2;
-    padding: 0;
+#cvbody {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	font-size: 20px;
+	grid-template-columns: auto auto;
+	width: 100%;
+	background-color: #1b1b1b;
+	color: #c3c2c2;
+	padding: 0;
 }
 
-.headers{
-    Color: black;
+.headers {
+	color: black;
 }
 
-.topics{
-    margin:  20px;
-    width: 100%;
+.topics {
+	margin: 20px;
+	width: 100%;
 }
 
-li h1{
-    border-bottom: solid #e4e4e4;
-    max-width: 100%;
+li h1 {
+	border-bottom: solid #e4e4e4;
+	max-width: 100%;
 }
 
-.contents{
-    border: solid #e4e4e4;
-    border-left: solid #cacaca;
+.contents {
+	border: solid #e4e4e4;
+	border-left: solid #cacaca;
 }
 
-header a{
-    display: block;
-    font-size: 20px;
-    color:#969696
+header a {
+	display: block;
+	font-size: 20px;
+	color: #969696;
 }
 
-#links li{
-    list-style: none;
+#links li {
+	list-style: none;
 }
 
 /*//////////////////////////////////////     Site Report                /////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -340,133 +359,135 @@ header a{
 /* ////////////////////////////           Site Report                    /////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* alligning the text to the right instead of center inheritence from main */
-.repCon{
-    text-align: left;
+.repCon {
+	text-align: left;
 }
 
 /* keeping the Report heading in middle */
-.repCon h1{
-    text-align: center;
+.repCon h1 {
+	text-align: center;
 }
 
-.repCon img{
-    max-width: 100%;
+.repCon img {
+	max-width: 100%;
 }
 
-.repCon .contents{
-    /* removing the general p tag's properties */
-    border: none;
+.repCon .contents {
+	/* removing the general p tag's properties */
+	border: none;
 }
 
-.repCon img{
-    width: 49%;
-    border: solid #b6b6b6;
+.repCon img {
+	width: 49%;
+	border: solid #b6b6b6;
 }
 
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////      /* Media Querries ////////////////////////////////////////////////////////////////////////////////////////////// */
 
-@media screen and ( max-width: 500px ){
-    /* changing the grid display */
-    .layout{
-        grid-template-columns: auto;
-    }
+@media screen and (max-width: 500px) {
+	/* changing the grid display */
+	.layout {
+		grid-template-columns: auto;
+	}
 
-    header{
-        grid-area: 1/1;
-    }
+	header {
+		grid-area: 1/1;
+	}
 
-    #menu{
-        grid-area: 2/1;
-        height: initial;
-    }
-    
-    main{
-        grid-area: 3/1;
-        max-width: 100%;
-        padding: 3px;
-    } 
-    /* For hamburger removing menus initially */
-    #drop{
-        transform-origin: 0% 0%;
-        display: none;
-        z-index: 1;
-        margin: 0;
-        background-color: #1b1b1b;
-        
-    }
-    
-    #hamburger{
-        margin-bottom: 0;
-        display:inline-block;
-        z-index: 0;
-        position: relative;
-        transform: translate(-100%, 0%);
-    }
+	#menu {
+		grid-area: 2/1;
+		height: initial;
+	}
 
-    #hamCon input{
-        z-index: 2;
-        position: relative;
-        display:inline-block;
-        width: 30px;
-        height: 30px;
-        margin: 0;
-        margin-top: 5px;
-        opacity: 0;
-    }
-/* giving properties to siblings of checkbox ie menu and hamburger icon after it's checked */
-    #hamCon input:checked ~ #drop{
-        display: block;
-        animation-name: slideDown;
-        animation-duration: 0.2s;
-    }
-  
-    #hamCon input:checked ~ #hamburger{
-        border: solid #6a6a6b;
-        transition-duration: 1s;
-        background-color: #ececec;
-    }
-    /* animation for menu to drop down */
-    @keyframes slideDown {
-        from{transform: scale(0);}
-        to{
-            transform: scale(1);
-        }
-    }
-/* making some elements bigger and conatin full width on mobile */
-    .topics, .fieldset, form, .repCon img{
-        width: 100%;
-    }
-    .grow{
-        width: 98%;
-        height: auto;
-    }
-    .grow:hover{
-        width: 100%;
-        box-shadow: none;
-        transform: none;
-    }
-    .hover{
-        object-fit: contain;
-    }
-    .textPic{
-        font-size: 20px;
-    }
+	main {
+		grid-area: 3/1;
+		max-width: 100%;
+		padding: 3px;
+	}
+	/* For hamburger removing menus initially */
+	#drop {
+		transform-origin: 0% 0%;
+		display: none;
+		z-index: 1;
+		margin: 0;
+		background-color: #1b1b1b;
+	}
 
-    .cvhead{
-        border-left: none;
-        border-right: none;
-    }
+	#hamburger {
+		margin-bottom: 0;
+		display: inline-block;
+		z-index: 0;
+		position: relative;
+		transform: translate(-100%, 0%);
+	}
 
-    #cvbody{
-        margin: 0;
-        width: 100%;
-    }
+	#hamCon input {
+		z-index: 2;
+		position: relative;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin: 0;
+		margin-top: 5px;
+		opacity: 0;
+	}
+	/* giving properties to siblings of checkbox ie menu and hamburger icon after it's checked */
+	#hamCon input:checked ~ #drop {
+		display: block;
+		animation-name: slideDown;
+		animation-duration: 0.2s;
+	}
 
-    input[type = text]{
-        font-size: 5vw;
-    }
+	#hamCon input:checked ~ #hamburger {
+		border: solid #6a6a6b;
+		transition-duration: 1s;
+		background-color: #ececec;
+	}
+	/* animation for menu to drop down */
+	@keyframes slideDown {
+		from {
+			transform: scale(0);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+	/* making some elements bigger and conatin full width on mobile */
+	.topics,
+	.fieldset,
+	form,
+	.repCon img {
+		width: 100%;
+	}
+	.grow {
+		width: 98%;
+		height: auto;
+	}
+	.grow:hover {
+		width: 100%;
+		box-shadow: none;
+		transform: none;
+	}
+	.hover {
+		object-fit: contain;
+	}
+	.textPic {
+		font-size: 20px;
+	}
 
+	.cvhead {
+		border-left: none;
+		border-right: none;
+	}
 
+	#cvbody {
+		margin: 0;
+		width: 100%;
+	}
+
+	input[type="text"] {
+		font-size: 5vw;
+	}
 }
